@@ -1,4 +1,4 @@
-# ![Logo](https://github.com/digitalshop24/bbetter_frontend/blob/congifuration/boilerplate/public/favicon.ico) Bbetter - a modern competitive sports portal
+# ![Logo](https://github.com/digitalshop24/bbetter_frontend/blob/master/public/favicon.ico) Bbetter - a modern competitive sports portal
 
 ## Pre-requirements
 - nodejs v6.x

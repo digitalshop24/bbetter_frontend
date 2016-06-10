@@ -1,1 +1,576 @@
 // стили относящиеся к посадочной странице
+$gray:#555555;
+$fzNAV: 18px;
+$red:#d8003d;
+
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.accordeonSection {
+  .tariffsCarousel {
+    .tariffs {
+      margin: 0;
+      .item {
+        background-size: cover;
+        background-position: center;
+        min-height: 667px;
+        .overlay {
+          padding:20px;
+          min-height: 667px;
+        }
+        h2 {
+          font-weight:800;
+          font-family: meta;
+          font-size: 35px;
+        }
+        p {
+          font-size: 18px;
+          span {
+            color:$red;
+            display: block;
+            margin: 20px 0 10px; 
+            font-weight:800;
+            font-size: 22px;
+            font-family: meta;
+          }
+        }
+        .redBtn {
+          display: block;
+          margin: 20px auto;
+        } 
+      }
+      .slick-dots{
+        bottom: -10px;
+        position: absolute;
+          li {
+            border:1px solid #000;
+            background-color: transparent;
+            border-radius:50%;
+            width: 15px;
+            height: 15px;
+          }
+          li.slick-active {
+            background-color: #000;
+          }
+        }
+    }
+  }
+  .accordion {
+    width: 100%;
+    overflow: hidden;
+    ul {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+      margin: 0;
+      padding: 0;
+      li {
+        display: table-cell;
+        vertical-align: bottom;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: width .5s ease;
+        -webkit-background-size: cover;
+        background-size:cover;
+        width: 10%;
+        div {
+          a {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction:column;
+            align-items:center;
+            height:600px;
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            color: #fff;
+            .redBtn.tarifBtn {
+              width: 150px;
+              margin-top: 50px;
+            }
+            h2 {
+              height: 200px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              span.prev {
+                img {
+                  max-width: 30px;
+                  display: block;
+                  margin: auto;
+                }
+              }
+            }
+            p {
+              font-size:0;
+              opacity: 0;
+              height: 0;
+              span{
+                font-size: 0;
+                height: 0;
+              }
+            }
+          }
+          a * {
+            width: 100%;
+          }
+        }
+      }
+      li:nth-child(1) {
+         background-image: url("img/accordeon/1.png");
+        a {
+          background-color:rgba(255,255,255,0.6);
+        }
+      }
+      li:nth-child(2) {
+        background-image: url("img/accordeon/2.png");
+        a {
+          background:rgba(128,212,255,0.5);
+        }
+      }
+      li:nth-child(3) {
+         background-image: url("img/accordeon/3.png");
+        a {
+          background:rgba(13,255,189,0.5);
+        }
+      }
+      li.active {
+        width: 50%;
+        a {
+          text-align: left;
+          background-color: rgba(255, 255, 255, 0.4);
+
+          align-items:flex-end;
+          h2 {
+            color:$red;
+            margin-right: 30px;
+            height: auto;
+            margin-bottom: 20px;
+            max-width: 350px;
+            font-size: 5rem;
+            line-height: 40px;
+            font-family:meta;
+            span.prev {
+              display: none;
+            }
+          }
+          p{
+              margin-right: 30px;
+              max-width: 350px;
+              line-height: 22px;
+              font-size: 18px;
+              font-family: Mir;
+              height: auto;
+              color:#000;
+              display: block;
+              opacity: 1;
+              span {
+                display: block;
+                color:$red;
+                height: auto;
+                font-size: 24px;
+              } 
+              .redBtn.tarifBtn {
+                  display: block;
+                }
+        	}
+        }
+      }
+    }
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.lineSec {
+  text-align: center;
+  background-image: url('img/lineSec/lineBg.png');
+  background-position: center center;
+  background-size: 100%;
+  height: 60px;
+  h1 {
+    color: #fff;
+    line-height: 60px;
+    margin:0;
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.stepByStep {
+  ul {
+    li {
+      display: inline-flex;
+      figure {
+        p.stepNum {
+          background-color: $red;
+          border-radius:50%;
+          width: 35px;
+          height: 35px;
+          margin:35px auto;
+          font-family:meta;
+          color: #fff;
+          font-size: 22px;
+        }
+        p.stepNum:before{
+            content:"│";
+            color: $red;
+            position: absolute;
+            transform: rotate(160deg);
+            margin: -35px 0 0 -15px;
+            font-weight: 200;
+        }
+        .imgWrap {
+          
+          position: relative;
+        }
+        figcaption {
+          p {
+            max-width:100px;
+            margin:20px auto;
+            font-weight: 800;
+            letter-spacing:.3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+
+.contestSec {
+  background-image: url('img/priziSection/blurBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .infinity {
+    display: block;
+    text-align: center;
+    height: 0;
+    img {
+      margin-top:-30px;
+      padding:20px;
+      border-radius: 50px;
+      background-color:#fff;
+    }
+  }
+  .leftSide {
+    p:nth-child(1) {
+      font-size: 32px;
+      font-weight:800;
+      color: #d8003d;
+    }
+  }
+  .rightSide {
+    h3 {
+      i {
+        color: #fff;
+        margin-left: 45px;
+        display: block;
+      }
+    } 
+    ul {
+      margin-bottom: 30px;
+      li {
+        font-family:meta;
+        font-size: 40px;
+        font-weight:800;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding:15px 0;
+        margin:0 0 15px;
+        position: relative;
+        span {
+          font-size: 14px;
+          font-family: mir;
+          position: absolute;
+          color: #000;
+          top:10px;
+          margin-left: -50px;
+        }
+      }
+      li:nth-child(1) {
+        color: #fff;
+        background-image:url('img/priziSection/1Bg.png');
+      }
+      li:nth-child(2) {
+        margin-right: 4px;
+        color: $red;
+        background-image: url('img/priziSection/2Bg.png');
+        span.some {
+          bottom:0;
+          top: 60px;
+          color: $red;
+        }
+      }
+      li:nth-child(3) {
+        margin-right: 32px;
+        color: $red;
+        background-image: url('img/priziSection/3Bg.png');
+      }
+      li:nth-child(4) {
+        font-size: 26px;
+        padding:25px 0;
+        color: #fff;
+        background-image: url('img/priziSection/4Bg.png');
+        span {
+          color:#fff;
+        }
+        span.some {
+          bottom:0;
+          top: 60px;
+          margin-left:-100px;
+          color:#fff;
+        }
+      }
+    }
+  }
+  .wrapperContest {
+    padding-top:50px;
+    padding-bottom:50px;
+    h1 {
+      color: #000;
+      margin-bottom: 50px;
+    }
+    h3 {
+      color: $red;
+      margin: 0 40px;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing:1px;
+    }
+    p {
+      font-size:$fzNAV;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.tariffSec {
+  text-align: center;
+  padding:50px 0 10px;
+  background-image: url('img/tariffSec/tariffBg.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid $red;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-height: 290px;
+      .itWrap {
+        width: 300px;
+        height:320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2 {
+          color: $red;
+        }
+        p {
+          color: #fff;
+        }
+        span {
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing:2px;
+          color:#fff;
+          display: block;
+          i {
+            font-weight: 800;
+          }
+        }
+        button {
+          max-width: 150px;
+          margin:0 auto;
+          height: 45px;
+          padding:0 25px;
+          margin-top: 40px;
+        }
+        button.DrugsBtn {
+          border:4px solid $red;
+          width: 80px;
+          height: 80px;
+          background-image:url('img/tariffSec/drugs.png');
+          background-size: cover;
+          background-position: center;
+          border-radius:50%;
+        }
+        .DrugsBtnWrap {
+          position: relative;
+          button {
+            position: absolute;
+            top:-60px;
+            right:0;
+            left:0;
+            bottom:0;
+          }
+          height: 45px;
+        }
+      }
+      .itWrap:nth-last-child(1){
+        p {
+          max-height: 0px;
+          margin: -30px 0px 30px;
+          line-height: 16px;
+        }
+      }
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.regimAndFoodSec {
+  padding:80px 0;
+  background-image: url('img/regimAndFood/regimAndFood.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  p {
+    margin:60px auto 100px;
+    max-width: 34em;
+    font-size: 18px;
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.historySec {
+  padding:60px 0;
+  background-image: url('img/history/history.png');
+  background-size: cover;
+  background-position: bottom;
+  color: #fff;
+  p {
+    margin:60px auto 100px;
+    max-width: 42em;
+    font-size: 18px;
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.beforeAfterSec {
+  background-image: url('img/beforeAfter/beforeAfterBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding:50px 0;
+  .beforeAfter {
+    margin: 50px 10em;
+    text-align: center;
+    .item {
+      li {
+        width: 45%;
+        height: 400px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      li:nth-child(1) {
+        display: inline-block;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color:#fff;
+        background-size: auto 100%;
+      }
+      li:nth-child(2) {
+        display: inline-block;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color:#fff;
+        background-size: auto 100%;
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      width: 40px;
+      height: 60px;
+    }
+    .slick-prev {
+      left:-45;
+      background-image: url('img/beforeAfter/leftArr.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+      content:'';
+    }
+    .slick-next {
+      right: -45px;
+      background-image: url('img/beforeAfter/rightArr.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.quoteSec {
+  color:#fff;
+  background-color:#ffb33b;
+  background-image:url('img/quote/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:50px 0;
+  p {
+    font-size: 18px;
+    margin-top:30px;
+  }
+  .quote {
+    font-size: 28px;
+    max-width: 495px;
+    text-align: left;
+    margin:30px auto 0;
+  }
+  .quote:before {
+    position: absolute;
+    content:"‹‹";
+    width: 30px;
+    height: 30px;
+    font-size: 78px;
+    line-height: 30px;
+    margin-left: -80px;
+  }
+  .quote:after {
+    position: absolute;
+    content:"››";
+    font-size: 78px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-left: 220px;
+  }
+  ul {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 50px auto 20px;
+    li {
+      margin:0 10px 0 0;
+      font-size:18px;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////

@@ -1,5 +1,6 @@
 import webpack from 'webpack';
-import ngAnnotate from 'ng-annotate-webpack-plugin';
+import NgAnnotate from 'ng-annotate-webpack-plugin';
+import ExtractText from 'extract-text-webpack-plugin';
 import path from 'path';
 
 export default {
@@ -13,7 +14,7 @@ export default {
     angular: true
   },
   resolve: {
-    extensions: ['', '.js', '.html']
+    extensions: ['', '.js', '.html', '.scss']
   },
   module: {
     loaders: [
@@ -23,22 +24,26 @@ export default {
         exclude: /node_modules/
       },
       {
-        test: /\.html$/,
-        loader: 'html'
+        test: /\.scss$/,
+        loader: ExtractText.extract('style', 'css!sass'),
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        loader: 'file?name=/img/[name].[ext]'
+        loader: 'file-loader?name=img/[hash].[ext]'
       },
       {
-        test: /\.(woff|woff2|ttf|eot)$/,
-        loader: 'file?name=/fonts/[name].[ext]'
+        test: /\.(woff|woff2|ttf|eot|otf)$/,
+        loader: 'file-loader?name=fonts/[hash].[ext]'
+      },
+      {
+        test: /\.html$/,
+        loader: 'html'
       }
     ]
   },
   plugins: [
-    new ngAnnotate({
-      add: true
-    })
+    new NgAnnotate({ add: true }),
+    new ExtractText('app.min.css', { allChunks: true })
   ]
 }

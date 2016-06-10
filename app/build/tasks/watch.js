@@ -10,6 +10,7 @@ export default gulp.task('watch', callback => {
   new DevServer(compiler, {
       hot: true,
       inline: true,
+      historyApiFallback: true,
       stats: {
         colors: true,
         exclude: ['node_modules']

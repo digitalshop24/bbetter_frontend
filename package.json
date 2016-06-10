@@ -1,0 +1,46 @@
+{
+  "name": "bbetter",
+  "version": "0.0.1",
+  "description": "Competitive sports portal",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev-server": "gulp dev-server",
+    "test": "echo No unit-tests were provided"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalshop24/bbetter_frontend.git"
+  },
+  "keywords": [
+    "bbetter",
+    "digitalshop24"
+  ],
+  "author": "digitalshop24",
+  "bugs": {
+    "url": "https://github.com/digitalshop24/bbetter_frontend/issues"
+  },
+  "homepage": "https://github.com/digitalshop24/bbetter_frontend#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "ngstorage": "^0.3.10"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "del": "^2.2.0",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-util": "^3.0.7",
+    "gulp-webpack": "^1.5.0",
+    "html-loader": "^0.4.3",
+    "ng-annotate-webpack-plugin": "^0.1.3",
+    "path": "^0.12.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

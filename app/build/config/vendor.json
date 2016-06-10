@@ -1,0 +1,10 @@
+{
+  "scripts": [
+    "node_modules/angular/angular.min.js",
+    "node_modules/angular-ui-router/release/angular-ui-router.min.js",
+    "node_modules/ngstorage/ngStorage.min.js"
+  ],
+  "styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ]
+}

@@ -7,6 +7,42 @@ $red:#d8003d;
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
+.timmerSec {
+  background-color:$red;
+  text-align: center;
+  .eTimer {
+    margin:auto;
+    padding:10px;
+    position: relative;
+    .etTitle{
+      font-weight: 800;
+      font-family:meta;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+    .etUnit {
+      position: relative;
+    }
+    .etSign {
+      position: absolute;
+      top:-10px;
+    }
+    .etDays,.etHours {
+      .etSign {
+        right:15px;
+      }
+    }
+    .etNumber,.etSep {
+      font-size: 40px;
+      font-weight: 800;
+      font-family:meta ;
+    }
+  }
+}
+/////////////////////////////
+////////////////////////////
+
+
 .accordeonSection {
   .tariffsCarousel {
     .tariffs {
@@ -127,12 +163,13 @@ $red:#d8003d;
       }
       li:nth-child(2) {
         background-image: url("img/accordeon/2.png");
+        background-position: 0 0;
         a {
           background:rgba(128,212,255,0.5);
         }
       }
       li:nth-child(3) {
-         background-image: url("img/accordeon/3.png");
+        background-image: url("img/accordeon/3.png");
         a {
           background:rgba(13,255,189,0.5);
         }
@@ -152,12 +189,13 @@ $red:#d8003d;
             max-width: 350px;
             font-size: 5rem;
             line-height: 40px;
-            font-family:meta;
+            font-family:meta;          
+            // display: block;
             span.prev {
               display: none;
             }
           }
-          p{
+          p {
               margin-right: 30px;
               max-width: 350px;
               line-height: 22px;
@@ -176,29 +214,42 @@ $red:#d8003d;
               .redBtn.tarifBtn {
                   display: block;
                 }
-        	}
+            }
         }
       }
     }
   }
 }
-
-
-////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-.lineSec {
-  text-align: center;
-  background-image: url('img/lineSec/lineBg.png');
-  background-position: center center;
-  background-size: 100%;
-  height: 60px;
-  h1 {
-    color: #fff;
-    line-height: 60px;
-    margin:0;
+@media only screen and (min-width : 1450px) {
+  .accordeonSection {
+    .accordion {
+      ul {
+        li {
+          div {
+            a {
+              height: 700px;
+            }
+          }
+        }
+      }
+    }
   }
 }
+@media only screen and (min-width : 1800px) {
+  .accordeonSection {
+    .accordion {
+      ul {
+        li {
+          div {
+            a {
+              height: 780px;
+            }
+          }
+        }
+      }
+    }
+  }
+} 
 
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -251,6 +302,7 @@ $red:#d8003d;
   background-image: url('img/priziSection/blurBg.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: -70px;
   .infinity {
     display: block;
     text-align: center;
@@ -288,6 +340,10 @@ $red:#d8003d;
         padding:15px 0;
         margin:0 0 15px;
         position: relative;
+        .wrapper {
+          display: block;
+
+        }
         span {
           font-size: 14px;
           font-family: mir;
@@ -296,6 +352,9 @@ $red:#d8003d;
           top:10px;
           margin-left: -50px;
         }
+      }
+      li:not(:last-child) {
+        margin-left: 180px;        
       }
       li:nth-child(1) {
         color: #fff;
@@ -331,6 +390,7 @@ $red:#d8003d;
           color:#fff;
         }
       }
+
     }
   }
   .wrapperContest {
@@ -354,95 +414,6 @@ $red:#d8003d;
   }
 }
 
-////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-.tariffSec {
-  text-align: center;
-  padding:50px 0 10px;
-  background-image: url('img/tariffSec/tariffBg.png');
-  background-size: cover;
-  background-position: center;
-  border-bottom: 4px solid $red;
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      max-height: 290px;
-      .itWrap {
-        width: 300px;
-        height:320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        h2 {
-          color: $red;
-        }
-        p {
-          color: #fff;
-        }
-        span {
-          font-size: 22px;
-          font-weight: 800;
-          letter-spacing:2px;
-          color:#fff;
-          display: block;
-          i {
-            font-weight: 800;
-          }
-        }
-        button {
-          max-width: 150px;
-          margin:0 auto;
-          height: 45px;
-          padding:0 25px;
-          margin-top: 40px;
-        }
-        button.DrugsBtn {
-          border:4px solid $red;
-          width: 80px;
-          height: 80px;
-          background-image:url('img/tariffSec/drugs.png');
-          background-size: cover;
-          background-position: center;
-          border-radius:50%;
-        }
-        .DrugsBtnWrap {
-          position: relative;
-          button {
-            position: absolute;
-            top:-60px;
-            right:0;
-            left:0;
-            bottom:0;
-          }
-          height: 45px;
-        }
-      }
-      .itWrap:nth-last-child(1){
-        p {
-          max-height: 0px;
-          margin: -30px 0px 30px;
-          line-height: 16px;
-        }
-      }
-    }
-}
-
-////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-.regimAndFoodSec {
-  padding:80px 0;
-  background-image: url('img/regimAndFood/regimAndFood.png');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  p {
-    margin:60px auto 100px;
-    max-width: 34em;
-    font-size: 18px;
-  }
-}
 
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -571,6 +542,374 @@ $red:#d8003d;
     }
   }
 }
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.offlineTrainingSec {
+  background-image: url('img/offline/bg.png');
+  background-size: cover;
+  background-position: center center;
+  padding:80px 0;
+  background-color:#000;
+  h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .wrpapRulIcon {
+    .imgWrap:after {
+      bottom: 294px;
+      left: -21px;
+    }
+    .imgWrap:before {
+      font-weight: 200;
+      bottom: 280px;
+      left: -10px;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+//////wrpapRulIcon COMMON FOR offlineTrainingSec and rulesSec//////
+
+
+.wrpapRulIcon {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-left: 100px;
+     .item {
+        max-width: 200px;
+        color: #fff;
+        margin: 20px;
+        position: relative;
+        font-size: 17px;
+      .imgWrap {
+        height: 80px;
+        line-height: 80px;
+        img {
+          vertical-align: middle;
+        }
+      }
+      .imgWrap:before {
+        content: "│";
+        color: #d8003d;
+        position: absolute;
+        transform: rotate(145deg);
+        margin: 0 0 0 -16px;
+        font-weight: 200;
+        bottom:85px;
+        left: -4px;
+      }
+      .imgWrap:after {
+        content: "│";
+        color: #d8003d;
+        position: absolute;
+        transform: rotate(145deg);
+        margin: -35px 0 0 -15px;
+        font-weight: 200;
+        bottom: 100px;
+        left: -15px;
+      }
+      p {
+        margin-top: 30px;
+      }
+     }
+  }
+
+//////wrpapRulIcon COMMON FOR offlineTrainingSec and rulesSec///////
+////////////////////////////////////////////////////////////////////
+
+.feedbackSec {
+  padding:50px 0;
+  background-image: url('img/feedbackSec/pinkBg2.png');
+  background-size: cover;
+  background-position: center;
+  h1 {
+    color: #fff;
+  }
+  p.text-center {
+    color: #fff;
+  }
+  .feedbackCarousel {
+    margin: 0 10em;
+    .item {
+      padding: 0px 65px;
+      li:nth-child(1) {
+        padding:0 0 0 40px ;
+        label {
+         height: 150px;
+          overflow: hidden;
+          margin-top: 30px;
+          color: #000;
+          span:nth-child(1) {
+            border:4px solid #000;
+            width: 150px;
+            height: 150px;
+            background-color: #000;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: inline-block;
+            
+          }
+          span:nth-child(1).artem {
+            background-image:url('img/feedbackSec/2_tren.jpg');
+          }
+          span:nth-child(1).ulia {
+            background-image:url('img/feedbackSec/1_tren.png');
+          }
+
+          span:nth-child(2) {
+            display: inline-block;
+            vertical-align: middle;
+            height: 200px;
+            margin-left: 40px;
+            font-size: 22px;
+          }
+        }
+      }
+      li:nth-child(2) {
+        margin:10px 0 0 60px;
+        width: 100px;
+        text-align: center;
+        color: #fff;
+        display:inline-block;
+        line-height:13px;
+      }
+      li:nth-child(2).Srt4 {
+        margin:0px 0 0 60px;
+      }
+
+      li:nth-child(3) {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 200px;
+        margin: -20px 0 0 70px;
+        max-width: 66%;
+      }
+      li:nth-child(4) {
+        background-color: red;
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      width: 40px;
+      height: 60px;
+    }
+    .slick-prev {
+      left:-45;
+      background-image: url('img/feedbackSec/leftArrW.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+      content:'';
+    }
+    .slick-next {
+      right: -45px;
+      background-image: url('img/feedbackSec/rightArrW.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.FAQsec {
+  padding:80px 0;
+  background-color:#e2e2e2;
+  h1 {
+    max-width: 300px;
+    margin:0 auto 80px;
+    text-align: center;
+  }
+  .panel {
+    margin:0 0 20px;
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    h4 {
+      a,a:hover {
+        display: block;
+        color: #000;
+        font-weight:800;
+        font-size: 26px;
+        span {
+          display: inline-block;
+          height:40px;
+          width: 40px;
+          background-color:$red;
+          margin-right: 25px;
+          border-radius: 50%;
+          border:2px solid $red;
+          font-size: 45px;
+          font-weight: 800;
+          vertical-align: middle;
+          color:#fff;
+          line-height: 36px;
+          text-align: center;
+        }
+        span:before {
+          content:"-";
+        }
+      }
+      a.collapsed {
+        span {
+          background-color: transparent;
+          border:2px solid;
+          color: $red;
+        }
+        span:before {
+          content:"+";
+        }
+      }
+    }
+    .answer {
+      max-width: 53em;
+      font-size: 17px;
+      margin-left:70px;
+    }
+  } 
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.btnStartSec {
+  padding:50px 0;
+  background-color:#262626;
+}
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.partnersSec {
+  padding:30px 0;
+  .partnerCarousel {
+    // display: flex;
+    text-align: center;
+    margin-top: 40px;
+    // justify-content:center;
+    .slick-track {
+      // display: flex;
+      // justify-content:center;
+      // align-items:center;
+      // align-content:center;
+      margin: auto;
+    }
+    .partners {
+      .item {
+          position: relative;
+          margin:0px 30px;
+          text-align: center;
+          img { 
+            max-width: 200px;
+            margin: auto;
+          }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+.sendMailSec {
+  background-color:#2b2b2b;
+  padding:0 0 20px;
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  form {
+    margin:20px 0;
+    .redBtn {
+      font-weight: 200;
+      margin: auto;
+      display: block;
+      width: 200px;
+      font-size: 20px;
+    }
+    .selectType {
+      display: flex;
+      justify-content:space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      input[type="radio"]{
+        display: none;
+      }
+      .hide-radio + label {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          padding: 0;
+          background-color: #F5F5F5;
+          color: #8C8C9C;
+          font-size: 16px;
+          transition: background-color 0.3s ease-in-out;
+          line-height: 12px;
+          text-indent: 20px;
+          margin-left: -60px;
+        }
+           
+        .hide-radio:checked + label {
+          display: inline-block;
+          background-color:$red;
+          color:#fff;
+        }
+    }
+    .typeInput {
+      display: flex;
+      justify-content:space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      input {
+        width: 47%;
+        border-radius: 20px;
+        background-color:#dcdcdc;
+        border: 0;
+        height: 40px;
+        padding:10px;
+        font-size: 17px;
+      }
+    }
+    .mailParth {
+      margin-bottom: 20px;
+      textarea{
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 50px;
+        border-radius: 20px;
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+        border: 0;
+        font-size: 17px;
+        padding:15px;
+      }
+      input {
+        width: 100%;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        height: 40px;
+        border: 0;
+        background-color:#dcdcdc;
+        font-size: 17px;
+        padding:10px;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////

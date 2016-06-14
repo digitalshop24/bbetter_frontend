@@ -46,7 +46,7 @@
 
     <div class="accordion hidden-xs">
           <ul>
-            <li class="active">
+            <li class="{{ctrl.active_slide_1}}" ng-click="ctrl.active_slide_1 = 'active'; ctrl.active_slide_3 = ''; ctrl.active_slide_2 = '';">
               <div>
                 <a>
                   <h2>Карьеристка<br/>
@@ -63,7 +63,7 @@
                 </a>
               </div>
             </li>
-            <li>
+            <li class="{{ctrl.active_slide_2}}" ng-click="ctrl.active_slide_2 = 'active'; ctrl.active_slide_1 = ''; ctrl.active_slide_3 = '';">
               <div>
                 <a>
                   <h2>Беззаботная
@@ -80,7 +80,7 @@
                 </a>
               </div>
             </li>
-            <li>
+            <li class="{{ctrl.active_slide_3}}" ng-click="ctrl.active_slide_3 = 'active'; ctrl.active_slide_1 = ''; ctrl.active_slide_2 = '';">
               <div>
                 <a>
                   <h2>Домохозяйка

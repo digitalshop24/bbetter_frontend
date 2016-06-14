@@ -1,46 +1,53 @@
-<div class="siteHeader">
-  <div class=" siteHeaderLogo">
-    <img src="img/logoNav.png" alt="logo" name="Быть лучше" />
-  </div>
-  <div class="siteHeader__section">
-    <div class="siteHeader__item siteHeaderButton">
+<nav class="navBar">
+  <nav class="wrapper">
+    <div class="logo">
+      <img  alt="logo" class="desctopLogo" src="img/logoNav.png" name="Быть лучше" />
+      <img  alt="logo" class="mobileLogo" src="img/logoNavMob.png" name="Быть лучше" />
+    </div>
+    <input type="checkbox" id="menuToggle">
+      <label for="menuToggle" class="label-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </input>
+    <ul>
       <a class="navWlaker" href="#fiveStep">
-    5 шагов,<br/> чтобы быть<br/> лучше
-    </a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
+        <li>
+        5 шагов,<br/> чтобы быть<br/> лучше
+        </li>
+      </a>
       <a class="navWlaker" href="#contestSec">
-    Выиграть<br/> 200 000
-    </a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
+        <li>
+        Выиграть<br/> 200 000
+        </li>
+      </a>
       <a class="navWlaker" href="#tariffSec">
-    Принять<br/> участие
-    </a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
+        <li>
+        Принять<br/> участие
+        </li>
+      </a>
       <a class="navWlaker" href="#beforeAfterSec">
-    Увидеть<br/> примеры
-    </a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
+        <li>
+        Увидеть<br/> примеры
+        </li>
+      </a>
       <a class="navWlaker" href="#feedbackSec">
-    О тренерах
-    </a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
+        <li>
+        О тренерах
+        </li>
+      </a>
       <a class="navWlaker" href="#partnersSec">
-    Партнеры<br/> программы
-    </a>
-    </div>
-  </div>
-
-  <div class="siteHeader__section right">
-    <div class="siteHeader__item siteHeaderButton">
-      <a href="">Войти</a>
-    </div>
-    <div class="siteHeader__item siteHeaderButton">
-      <button class="grayBtn" data-toggle="modal" data-target="#basicModal">Регистрация</button>
-    </div>
-  </div>
-</div>
+        <li>
+        Партнеры<br/> программы
+        </li>
+      </a>
+    </ul>
+    <ul class="right">
+      <a ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</a>
+      <a ng-show="$ctrl.user.authorized" ng-click="$ctrl.logout()" href="">Выйти</a>
+      <button class="grayBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registration()" type="button">Регистрация</button>
+      <button class="grayBtn" ng-show="$ctrl.user.authorized" ng-click="$ctrl.editProfile()"><span ng-bind="$ctrl.user.name"></span></button>
+    </ul>
+  </nav>
+</nav>

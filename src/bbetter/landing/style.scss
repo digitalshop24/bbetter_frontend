@@ -913,3 +913,98 @@ $red:#d8003d;
 
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
+.modalSec {
+  .modal-header {
+    border:0;
+    .close {
+      font-size: 60px;
+      line-height: 0px;
+      transition:opacity .4s;
+      height: 30px;
+    }
+    .modalLogo {
+      max-width: 75px;
+      margin: -35px auto 0;
+      display: block;
+    }
+  }
+  .modal-body {
+    .formWrapper {
+      form {
+        input[type="text"] {
+          background-color: #f5f5f5;
+          border-radius: 20px;
+          border: 0;
+          padding: 10px 15px;
+          font-size: 18px;
+          margin: 15px 30px;
+          width: 90%;
+        }
+        .MG {
+          text-align: right;
+          input {
+            display: inline-block;
+          }
+        }
+        .hide-radio + label {
+          display: block;
+          float: right;
+          width: 50px;
+          height:50px;
+          border-radius:50%;
+          padding: 10px 0;
+          text-align: center;
+          background-color:#F5F5F5;
+          color:#8C8C9C;
+          font-size: 20px;
+          -webkit-transition: background-color 0.3s ease-in-out;
+          -moz-transition: background-color 0.3s ease-in-out;
+          -o-transition: background-color 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out;
+          margin: 10px 30px 0 -20px;
+        }
+           
+        .hide-radio:checked + label {
+          display: inline-block;
+          width: 50px;
+          background-color:$red;
+          color:#fff;
+        }
+        .checked_Male {
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+    .thankU {
+      h2 {
+        color:$red;
+        text-align: center;
+        margin: 40px auto 80px;
+      }
+    }
+  }
+  .modal-footer {
+     border:0;
+     text-align: center;
+     max-height: 125px;
+     p.redLabel {
+      color:$red;
+      font-size:22px;
+      font-weight: 800;
+      letter-spacing: .4;
+      margin-bottom: 30px;
+     }
+     .redBtn {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: .9;
+     }
+  }
+  
+}
+
+.thankU {
+  display: none;
+}

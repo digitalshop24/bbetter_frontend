@@ -1,4 +1,3 @@
-import webpack from 'webpack';
 import NgAnnotate from 'ng-annotate-webpack-plugin';
 import ExtractText from 'extract-text-webpack-plugin';
 import path from 'path';
@@ -11,10 +10,11 @@ export default {
     filename: 'app.min.js'
   },
   externals: {
-    angular: true
+    'angular': 'angular',
+    'swagger-client': 'SwaggerClient'
   },
   resolve: {
-    extensions: ['', '.js', '.html', '.scss']
+    extensions: ['', '.js', '.json', '.html', '.scss']
   },
   module: {
     loaders: [
@@ -24,13 +24,25 @@ export default {
         exclude: /node_modules/
       },
       {
+        test: /\.json$/,
+        loader: 'json',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractText.extract('style', 'css')
+      },
+      {
         test: /\.scss$/,
         loader: ExtractText.extract('style', 'css!sass'),
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        loader: 'file-loader?name=img/[hash].[ext]'
+        loaders: [
+          'file-loader?name=img/[hash].[ext]',
+          'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
+        ]
       },
       {
         test: /\.(woff|woff2|ttf|eot|otf)$/,
@@ -43,7 +55,7 @@ export default {
     ]
   },
   plugins: [
-    new NgAnnotate({ add: true }),
-    new ExtractText('app.min.css', { allChunks: true })
+    new NgAnnotate({add: true}),
+    new ExtractText('app.min.css', {allChunks: true})
   ]
-}
+};

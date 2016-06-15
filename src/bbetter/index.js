@@ -6,7 +6,6 @@ import landing from './landing';
 import profile from './profile';
 import style from './style';
 import content from './template';
-import style from './style';  // eslint-disable-line
 
 
 export default angular.module('bbetter', [

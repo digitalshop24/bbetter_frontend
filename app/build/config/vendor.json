@@ -16,16 +16,9 @@
   ],
   "styles": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
-<<<<<<< HEAD
     "bower_components/slick-carousel/slick/slick.css",
     "bower_components/slick-carousel/slick/slick-theme.css",
     "node_modules/font-awesome/css/font-awesome.min.css"
-=======
-    "node_modules/slick-carousel/slick/slick-theme.css",
-    "node_modules/slick-carousel/slick/slick.css",
-    "node_modules/font-awesome/css/font-awesome.min.css",
-    "node_modules/bootstrap/dist/css/bootstrap.min.css"
->>>>>>> feature/authorization
   ],
   "fonts": [
     "node_modules/font-awesome/fonts/fontawesome-webfont.woff",

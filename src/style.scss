@@ -1,6 +1,18 @@
 // стили общие на всё приложение
 // шрифты, кнопки, миксины и т.д.
 
+@font-face {
+  font-family: Mir;
+  src: url("fonts/Mir/Mir.otf");
+  font-style: normal;
+  font-weight: normal; 
+}
+@font-face {
+  font-family: meta;
+  src: url("fonts/meta/MetaPro-Bold.otf");
+  font-style: normal;
+  font-weight: normal; 
+}
 $gray:#555555;
 $fzNAV: 18px;
 $red:#d8003d;

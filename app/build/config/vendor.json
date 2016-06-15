@@ -5,14 +5,18 @@
     "node_modules/ngstorage/ngStorage.min.js",
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.min.js",
-    "node_modules/slick-carousel/slick/slick.min.js",
     "lib/time.js",
-    "lib/custom.js"
+    "lib/custom.js",
+    "bower_components/angular-timer/dist/angular-timer.min.js",
+    "bower_components/humanize-duration/humanize-duration.js",
+    "bower_components/moment/min/moment.min.js",
+    "bower_components/slick-carousel/slick/slick.js",
+    "bower_components/angular-slick/dist/slick.min.js"
   ],
   "styles": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "node_modules/slick-carousel/slick/slick-theme.css",
-    "node_modules/slick-carousel/slick/slick.css",
+    "bower_components/slick-carousel/slick/slick.css",
+    "bower_components/slick-carousel/slick/slick-theme.css",
     "node_modules/font-awesome/css/font-awesome.min.css"
   ],
   "fonts": [

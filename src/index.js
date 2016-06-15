@@ -5,6 +5,8 @@ import style from './style';
 const app = angular.module('app', [
   'ui.router',
   'ngStorage',
+  'timer',
+  'slick',
   bbetter.name
 ]);
 

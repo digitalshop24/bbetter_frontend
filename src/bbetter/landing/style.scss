@@ -4,6 +4,7 @@ $fzNAV: 18px;
 $red:#d8003d;
 
 
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
@@ -464,6 +465,18 @@ $red:#d8003d;
         border-bottom-right-radius: 20px;
         background-color:#fff;
         background-size: auto 100%;
+      }
+      .bg1 {
+        background-image: url("img/beforeAfter/beforeFront.png");
+      }
+      .bg2 {
+        background-image: url("img/beforeAfter/beforeBack.png");
+      }
+      .bg3 {
+        background-image: url("img/beforeAfter/beforeRight.png");
+      }
+      .bg4 {
+        background-image: url("img/beforeAfter/beforeLeft.png");
       }
     }
     .slick-prev,
@@ -1007,4 +1020,42 @@ $red:#d8003d;
 
 .thankU {
   display: none;
+}
+.TitleTimer {
+  display: inline-block;
+  color: #fff;
+  h5 {
+    font-size: 30px;
+    position: relative;
+    top: -7px;
+    left: -10px;
+  }
+}
+.Timer {
+  display: inline-block;
+  padding: 5px 0;
+  li {
+    display: inline-block;
+    font-size: 25px;
+    padding: 0 5px;
+      color: #fff;
+    p {
+      color: #fff;
+      font-size: 14px;
+      font-family: Mir;
+    }
+    span {
+      font-size: 40px;
+      font-weight: 800;
+      font-family: meta;
+      color: #fff;
+    }
+    h5 {
+      margin: 0;
+    }
+  }
+  .two_dots {
+    position: relative;
+    left: 5px;
+  }
 }

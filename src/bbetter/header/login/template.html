@@ -1,0 +1,31 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button ng-click="ctrl.close()" type="button" class="close">&times;</button>
+    <img class="modalLogo" src="../img/infinityModal.png" alt="logo modal" />
+  </div>
+  <div class="modal-body">
+    <div class="formWrapper">
+      <form name="registrationForm" ng-submit="ctrl.login(credentials)">
+        <div class="row">
+          <div class="col-md-12">
+            <input ng-model="credentials.email" type="email" placeholder="Электронная почта" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input ng-model="credentials.password" type="password" placeholder="Пароль" required/>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" name="submit" class="redBtn" ng-disabled="registrationForm.$invalid">Войти</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--  formWrapper -->
+  </div>
+  <!-- modal-body -->
+</div>

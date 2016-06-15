@@ -66,6 +66,7 @@ $red:#d8003d;
           span {
             color:$red;
             display: block;
+
             margin: 20px 0 10px; 
             font-weight:800;
             font-size: 22px;
@@ -76,6 +77,7 @@ $red:#d8003d;
           display: block;
           margin: 20px auto;
         } 
+
       }
       .slick-dots{
         bottom: -10px;
@@ -211,6 +213,7 @@ $red:#d8003d;
                 color:$red;
                 height: auto;
                 font-size: 24px;
+
               } 
               .redBtn.tarifBtn {
                   display: block;
@@ -252,6 +255,7 @@ $red:#d8003d;
   }
 } 
 
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
@@ -279,7 +283,7 @@ $red:#d8003d;
             font-weight: 200;
         }
         .imgWrap {
-          
+
           position: relative;
         }
         figcaption {
@@ -329,7 +333,9 @@ $red:#d8003d;
         margin-left: 45px;
         display: block;
       }
+
     } 
+
     ul {
       margin-bottom: 30px;
       li {
@@ -356,6 +362,7 @@ $red:#d8003d;
       }
       li:not(:last-child) {
         margin-left: 180px;        
+
       }
       li:nth-child(1) {
         color: #fff;
@@ -478,6 +485,7 @@ $red:#d8003d;
       .bg4 {
         background-image: url("img/beforeAfter/beforeLeft.png");
       }
+
     }
     .slick-prev,
     .slick-next {
@@ -666,7 +674,7 @@ $red:#d8003d;
             background-repeat: no-repeat;
             border-radius: 50%;
             display: inline-block;
-            
+
           }
           span:nth-child(1).artem {
             background-image:url('img/feedbackSec/2_tren.jpg');
@@ -791,6 +799,7 @@ $red:#d8003d;
       margin-left:70px;
     }
   } 
+
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -871,7 +880,6 @@ $red:#d8003d;
           text-indent: 20px;
           margin-left: -60px;
         }
-           
         .hide-radio:checked + label {
           display: inline-block;
           background-color:$red;
@@ -1059,3 +1067,4 @@ $red:#d8003d;
     left: 5px;
   }
 }
+

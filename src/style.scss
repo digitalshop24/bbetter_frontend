@@ -1,11 +1,13 @@
 // стили общие на всё приложение
 // шрифты, кнопки, миксины и т.д.
 
+
 @font-face {
   font-family: Mir;
   src: url("fonts/Mir/Mir.otf");
   font-style: normal;
   font-weight: normal; 
+
 }
 @font-face {
   font-family: meta;
@@ -67,16 +69,18 @@ nav {
       margin-bottom: 5px;
     }
   }
+
   
   #menuToggle {display: none;}
   .label-toggle {display: none;}
   
+
   .wrapper {
     align-items: center;
     display: flex;
     justify-content: space-around;
   }
-  
+
   @media screen and (max-width: 1000px) {
     .logo {
       img.mobileLogo {
@@ -105,7 +109,9 @@ nav {
       }
     }
     ul.right {
+
       height:0; 
+
     }
     #menuToggle:checked ~ ul {
       opacity: 1;
@@ -116,7 +122,7 @@ nav {
       height: 60px;
       margin:30px auto;
     }
-    
+
     .label-toggle {
       cursor: pointer;
       position: absolute;
@@ -137,7 +143,9 @@ nav {
   }
 }
 
+
 //// BUTTONS 
+
 
 .grayBtn {
   background-color:$gray;
@@ -195,5 +203,4 @@ footer {
     margin-right: 60px;
   }
 }
-
 

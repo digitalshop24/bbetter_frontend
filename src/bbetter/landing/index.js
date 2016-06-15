@@ -1,4 +1,5 @@
 import angular from 'angular';
+import controller from './controller';
 import template from './template';
 import style from './style';
 import LandCtrl from './controller.js';

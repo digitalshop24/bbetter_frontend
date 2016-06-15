@@ -1,13 +1,17 @@
 import angular from 'angular';
-import header from './header/template';
-import content from './template';
+import modal from './modal';
+import header from './header';
 import footer from './footer/template';
 import landing from './landing';
 import profile from './profile';
 import style from './style';
-import initSlider from './initSlider/index'
+import content from './template';
+import style from './style';  // eslint-disable-line
+
 
 export default angular.module('bbetter', [
+  modal.name,
+  header.name,
   landing.name,
   profile.name,
   // initSlider.name
@@ -20,12 +24,9 @@ export default angular.module('bbetter', [
       '': {
         template: content
       },
-      'header@bbetter': {
-        template: header
-      },
       'footer@bbetter': {
         template: footer
       }
     }
-  })
-})
+  });
+});

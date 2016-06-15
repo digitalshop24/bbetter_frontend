@@ -1,4 +1,4 @@
- 'use strict';
+'use strict';
 export default class LandCtrl {
     constructor() {
         this.active_slide_1 = 'active';
@@ -6,3 +6,4 @@ export default class LandCtrl {
         this.active_slide_3 = '';
     }
 }
+

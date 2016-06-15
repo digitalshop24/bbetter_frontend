@@ -1,5 +1,4 @@
 node_modules/
-bower_components/
 public/**/*
 !public/index.html
 !public/favicon.ico

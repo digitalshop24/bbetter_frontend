@@ -1,19 +1,23 @@
 <div>
   <section class="notif">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
-          <img src="img/notif.png" alt="">
-          <h2>Не забыть сделать видео недельных соревнований и выслать до 23.59</h2>
-          <p>Закрыть</p>
+        <div class="col-md-12">
+          <div class="notifWrap">
+            <h2>
+            <img src="img/notif.png" alt="" />
+            Не забыть сделать видео недельных соревнований и выслать до 23.59</h2>
+            <p>Закрыть</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- img/accordeonSlider/1.jpg -->
+
   <section class="lineSec" id="fiveStep">
     <h1>Тариф &laquo;Парный старт&raquo;</h1>
   </section>
+
   <section class="user_data">
     <div class="container ">
       <div class="row">
@@ -69,7 +73,6 @@
           <p class="pink " style="">Загрузка фотографий станет доступной после оплаты тарифа</p>
           <button class="redBtn">Сохранить изменения</button>
         </div>
-
       </div>
     </div>
   </section>
@@ -79,51 +82,41 @@
         <img src="../img/infinity.png" />
       </span>
   </section>
-  <section class="tariffSec lk_tariff" id="tariffSec">
+  <section class="tariffSec" id="tariffSec">
     <div class="container">
       <div class="row">
+        <h1>Что берем?</h1>
+      </div>
+      <div class="row">
         <div class="col-md-12">
-          <h2 class="titel_tariff">Что берем?</h2>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-3 first">
-          <h2>Онлайн-<br/> тренировка</h2>
-          <p>Начать онлайн тренировки в любое время без участия в соревновании</p>
-          <p class="price">2 000 <span></span></p>
-          <div class="infinity">
-            <button class="redBtn">Начать!</button>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-2">
-          <h2>Спортсмен одиночка</h2>
-          <p>1 человек</p>
-          <p class="price">2 000 <span></span></p>
-          <div class="infinity">
-            <button class="redBtn">Это я!</button>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <h2>Парный<br/> старт</h2>
-          <p>2 человека</p>
-          <p class="price">3 000 <span></span></p>
-          <div class="infinity">
-            <button class="redBtn">Это мы!</button>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <h2>Командный<br/> старт</h2>
-          <p>5 человек</p>
-          <p class="price">5 000 <span></span></p>
-          <div class="infinity">
-            <button class="redBtn">Берем!</button>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3 last">
-          <h2>Допинг<br/><br/></h2>
-          <p class="mobFix">Доспупен каждую неделю за исключением финала. Дает возможность проходить в следующий уровень без недельного соревнования </p>
-          <p class="price">1 000 <span></span></p>
-          <div class="infinity">
-            <button class="DrugsBtn"></button>
-          </div>
+            <div class="wrapper">
+              <div class="itWrap">
+                <h2>Онлайн-<br/>тренировка</h2>
+                <p>Начать онлайн тренировки в любое время без участия в соревновании</p>
+                <span>2 000 <i class="fa fa-rub"></i></span>
+                <button class="redBtn">Начать!</button>
+              </div>
+              <div class="itWrap">
+                <h2>Спортсмен<br/> одиночка</h2>
+                <p>1 человек</p>
+                <span>2 000 <i class="fa fa-rub"></i></span>
+                <button class="redBtn">Это я!</button>
+              </div>
+              <div class="itWrap">
+                <h2>Парный<br/> старт</h2>
+                <p>2 человека</p>
+                <span>3 000 <i class="fa fa-rub"></i></span>
+                <button class="redBtn">Это мы!</button>
+              </div>
+              <div class="itWrap">
+                <h2>Допинг</h2>
+                <p>Доспупен каждую неделю за исключением финала. Дает возможность проходить в следующий уровень без недельного соревнования</p>
+                <span>1 000 <i class="fa fa-rub"></i></span>
+                <div class="DrugsBtnWrap">
+                  <button class="DrugsBtn"></button>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -228,7 +221,7 @@
           </table>
         </div>
         <div class="col-md-3 text-left table_plan">
-          <h3 style="height: 145px;">Задание на день</h3>
+          <h3 class="h3Fix">Задание на день</h3>
           <table class="">
             <thead>
               <tr>

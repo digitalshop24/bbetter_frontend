@@ -1,0 +1,4 @@
+{
+  "domain": "http://bbetter.herokuapp.com/api",
+  "appTokenName": "bbetter-app-token"
+}

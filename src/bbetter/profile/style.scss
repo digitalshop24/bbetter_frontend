@@ -1,1 +1,325 @@
 // стили относящиеся к странице профиля пользователя
+
+//lk
+$h2: 24px;
+.whiteBtn {
+  background-color: #fff;
+  padding:10px 25px;
+  border:2px solid #fff;
+  border-radius: 25px;
+  color: #a5a5a5;
+  font-size:20px;
+  font-family: meta;
+  // transition:background-color .4s,color .4s;
+}
+.pink {
+  color: #db114a;
+}
+.redBtn {
+  font-family: meta;
+}
+
+h2,p {
+	margin:0;
+	padding:0;
+}
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.notif {
+  background-color: #ffc017;
+  padding:50px 0;
+  color:#fff;
+  .notifWrap {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex:1 1 auto;
+ 	h2 {
+		font-size: $h2;
+		align-items: center;
+		margin: auto;
+		img {
+			margin-right: 30px;
+		}
+	 }
+
+  }
+}
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.user_data {
+  background-color: #fff;
+  .user_data_titel {
+    padding: 30px 0;
+    h2 {
+      display: inline-block;
+      padding-left: 27%;
+      padding-right: 80px;
+    }
+    p {
+      display: inline-block;
+      padding-right: 20px;
+      position: relative;
+      top: 9px;
+    }
+  }
+  .form {
+    input,button {
+      border: none;
+      border-radius:50px;
+      background-color: #f5f5f5;
+      color: #a0a0a0;
+      font-size: 20px;
+    }
+    .motivation_word {
+      width: 100%;
+      text-align: center;
+      padding: 10px 20px;
+    }
+    .user_data_btn {
+      height: 300px;
+      width: 30%;
+      margin-top: 30px;
+    }
+    .btn_left {
+      border-radius: 10px 0 0 10px;
+    }
+    .btn_center {
+      border-radius: 0 10px 10px 0;
+    }
+    .btn_right {
+      margin-left: 20px; 
+      border-radius:10px;
+    }
+  }
+  .user_paramentry {
+    ul {
+      display: inline-block;
+      width: 45%;
+      li {
+        margin: 10px 0;
+        input {
+          width: 100%;
+          padding: 10px 0 10px 12px;
+        }
+      }
+    }
+  }
+  .footer_user_data {
+    .redBtn {
+      margin-bottom: 70px;
+    }
+    .pink {
+      padding: 20px 0;
+    }
+  }
+}
+
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.week_plan_drugs_eat {
+  background-color: #e8698d;
+  background-image: url("img/weekPlan/bgPlan.png");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center center;
+  .h3Fix {
+  	height: 136px;
+  }
+  button {
+    margin: 5px 5px 20px 5px; 
+    width: 163px;
+    padding: 10px 0;
+  }
+  .titel_tariff {
+      color: #fff;
+      font-size: 50px;
+      font-weight: bold;
+      margin: 0;
+      padding: 70px 0 30px 0; 
+      font-family: meta;
+  }
+  .table_plan {
+    padding-bottom:70px;
+    h3 {
+      color: #000;
+      font-style: italic;
+      padding-left: 10px;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: meta;
+    }
+    p {
+      color: #fff;
+      padding-left: 10px;
+      padding-bottom: 30px;
+      font-size: 20px;
+      height: 90px;
+    }
+    table {
+      width: 100%;
+      thead {
+        tr {
+          td {
+            color: #000;
+            padding: 0px 10px 10px 10px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 0px 10px 10px 10px;
+            color: #fff;
+            vertical-align: top;
+          }
+          td:nth-child(2) {
+            border-right: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.calculate {
+  background-color: #52acff;
+  background-image: url("img/calk/bgCalcul.png");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center center;
+  padding-bottom: 100px;
+  input,select {
+      border: none;
+      border-radius:50px;
+      background-color: #f5f5f5;
+      color: #a0a0a0;
+      font-size: 20px;
+      padding: 10px;
+      width: 150px;
+  }
+  select {
+  -webkit-appearance: none;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none !important;
+    background-image: url('img/calk/arrowBottom.png');
+    background-position: right 15px;
+  }
+  select::-ms-expand {
+      display: none;
+  }
+  p {
+    color: #fff;
+    padding: 30px 0;
+  }
+  h2 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: meta;
+      padding: 25px 0;
+  }
+  ul {
+    width: 30%;
+    display: inline-block;
+    li {
+      font-size: 30px;
+      color: #fff;
+      font-family: meta;
+      span {
+        color: #000;
+        font-size: 32px;
+
+      }
+    }
+    li:nth-child(1) {
+      font-size: 30px;
+      color: #000;
+    }
+    li:nth-child(2) {
+      font-size: 50px;
+      color: #fff;
+      padding: 10px 0;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.video_otchet {
+  .col-md-12 {
+    padding: 0;
+  }
+  .round {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      position: absolute;
+      background-color: #f5f5f5;
+      left: 45%;
+      margin-top: 20px;
+      z-index: 1;
+      clip: rect(auto, auto, 70px, auto);
+      h2 {
+        color: #d8003d;
+      }
+  }
+  .round_active {
+    background-color: #d8003d;
+    h2 {
+      color: #fff;
+    }
+  }
+  .accord {
+    border-bottom: 5px solid #f5f5f5;
+    border-top: 5px solid #f5f5f5;
+    position: relative;
+    z-index: 2;
+    margin-top: 90px;
+    // min-height: 130px;
+    background-color: #fff;
+  }
+
+  .accord_active {
+    background-color: #d8003d;
+    border-bottom: 10px solid #d8003d;
+    border-top: 10px solid #d8003d;
+  } 
+}
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+.trainMail {
+  background-color: #52acff;
+  background-image: url("img/bg_form.png");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center center;
+  .foto {
+    color: #fff;
+    font-size: 18px;
+  }
+  .load {
+    color: #fff;
+    margin: 20px 30px 30px 0; 
+    font-size: 18px;
+  }
+  .btn_black {
+    margin-bottom: 50px;
+  }
+}

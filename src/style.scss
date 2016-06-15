@@ -1,2 +1,200 @@
-// стили общие на всё приложение
-// шрифты, кнопки, миксины и т.д.
+$gray:#555555;
+$fzNAV: 18px;
+$red:#d8003d;
+
+@font-face {
+  font-family: Mir;
+  src: url("fonts/Mir/Mir.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: meta;
+  src: url("fonts/meta/MetaPro-Bold.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.slick-slide:focus, a,a:hover, a:focus {
+  text-decoration: none;
+  outline:none;
+}
+
+body {
+  font-family: Mir;
+}
+h1 {
+  font-family:meta;
+}
+ul {
+  padding:0;
+  li {
+    list-style-type: none;
+  }
+}
+
+////// HEADER
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin:0;
+    a {
+      color:#000;
+      text-decoration: none;
+      transition: all .5s ease;
+      &:hover {color: $red;}
+      &:focus {color: $red;}
+      li  {
+        margin:0 20px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+  img.mobileLogo {
+    display: none;
+  }
+  ul.right {
+    flex-direction:column;
+    a {
+      font-size: 18px;
+      color:$red;
+      margin-bottom: 5px;
+    }
+  }
+
+  #menuToggle {display: none;}
+  .label-toggle {display: none;}
+
+  .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .logo {
+      img.mobileLogo {
+        display: block;
+        margin: 40px;
+        max-width: 200px;
+      }
+      img.desctopLogo {
+        display: none;
+      }
+    }
+    ul {
+      display: block;
+      height: 250px;
+      list-style-type: none;
+      height: 0;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+      li {
+        border-bottom: 1px solid #000;
+        display: block;
+        padding: 1em 0;
+      }
+    }
+    ul.right {
+      height:0;
+    }
+    #menuToggle:checked ~ ul {
+      opacity: 1;
+      height:470px;
+      visibility: visible;
+    }
+    #menuToggle:checked ~ ul.right {
+      height: 60px;
+      margin:30px auto;
+    }
+
+    .label-toggle {
+      cursor: pointer;
+      position: absolute;
+      display: block;
+      height: 35px;
+      width: 40px;
+      top:60px;
+      right: 20px;
+      span {
+        background-color:$red;
+        display: block;
+        margin-bottom: 6px;
+        width: 35px;
+        height: 3px;
+      }
+    }
+    .wrapper {display: block;}
+  }
+}
+
+//// BUTTONS
+
+.grayBtn {
+  background-color:$gray;
+  padding:15px 25px;
+  border:0;
+  border-radius: 25px;
+  color: #fff;
+  font-size:$fzNAV;
+}
+.redBtn {
+  background-color: $red;
+  padding:10px 25px;
+  border:2px solid $red;
+  border-radius: 25px;
+  color: #fff;
+  font-size:20px;
+  transition:background-color .4s,color .4s;
+  &:disabled {
+    background-color: $gray;
+    border-color: $gray;
+  }
+}
+.redBtn:hover:enabled {
+  background-color: #fff;
+  color: $red;
+  border:2px solid $red;
+}
+
+
+///// FOOTER
+
+footer {
+  background-color:#8b8b8b;
+  .logoFooter {
+    max-width: 300px;
+  }
+  ul {
+    margin: 60px 0 0;
+    li {
+      display: inline-block;
+      font-size:$fzNAV;
+      margin-right: 20px;
+      a {
+        color: #000;
+        transition:color .4s;
+      }
+      a:hover,a:focus {
+        color: $red;
+      }
+    }
+  }
+  .left {
+    li {
+      margin-right: 60px;
+    }
+  }
+  .right {
+    text-align: right;
+    margin-right: 60px;
+  }
+}

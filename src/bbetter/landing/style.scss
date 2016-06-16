@@ -767,19 +767,29 @@ $red:#d8003d;
           display: inline-block;
           height:40px;
           width: 40px;
-          background-color:$red;
           margin-right: 25px;
           border-radius: 50%;
-          border:2px solid $red;
           font-size: 45px;
           font-weight: 800;
           vertical-align: middle;
-          color:#fff;
           line-height: 36px;
           text-align: center;
         }
-        span:before {
+        .pl1 {
+          border:2px solid $red;
+          background-color:$red;
+          color:#fff;
+        }
+        .pl2 {
+          background-color: transparent;
+          border:2px solid;
+          color: $red;
+        }
+        .pl1:before {
           content:"-";
+        }
+        .pl2:before {
+          content:"+";
         }
       }
       a.collapsed {
@@ -1068,3 +1078,6 @@ $red:#d8003d;
   }
 }
 
+.collapseParth {
+
+}

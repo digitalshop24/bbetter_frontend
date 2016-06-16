@@ -479,21 +479,29 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Часто задаваемые вопросы</h1>
+          
+      
           <div class="collapseParth">
-            <div id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel">
-                <div role="tab">
+            <div >
+              <div class="panel" ng-repeat="data in ctrl.date_question" ng-init="show.$index = false">
+                <div>
                   <h4>
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" >
-                      <span class="pl"></span>
-                      Когда стартует проект?
+                    <a class="collapsed" href="" ng-click="show.$index = !show.$index">
+                      <span class="pl1" ng-show="show.$index"></span>
+                      <span class="pl2" ng-show="!show.$index"></span>
+                      {{data.question}}
                     </a>
                   </h4>
                 </div>
-                <div id="collapseOne" class="collapse answer">
-                    13 июня.
+                <div class=" answer" ng-show="show.$index">
+                    {{data.answer}}
                 </div>
               </div>
+              
+
+
+<!-- 
+
               <div class="panel">
                 <div role="tab">
                   <h4>
@@ -723,7 +731,7 @@
                 <div id="collapse18" class="collapse answer">
                    В личном кабинете. 
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

@@ -65,7 +65,7 @@ nav {
     flex-direction:column;
     a {
       font-size: 18px;
-      color:$red;
+      // color:$red;
       margin-bottom: 5px;
     }
   }
@@ -80,16 +80,20 @@ nav {
     display: flex;
     justify-content: space-around;
   }
-
+.desctopLogo, .mobileLogo {
+  cursor: pointer;
+}
   @media screen and (max-width: 1000px) {
     .logo {
       img.mobileLogo {
         display: block;
         margin: 40px;
         max-width: 200px;
+
       }
       img.desctopLogo {
         display: none;
+        
       }
     }
     ul {

@@ -7,8 +7,15 @@ export default class ProfileCtrl {
         this.video4 = false;
         this.video5 = false;
         this.video6 = false;
+        this.myVideo1 = true;
+        this.myVideo2 = false;
+        this.myVideo3 = false;
+        this.myVideo4 = false;
+        this.myVideo5 = false;
+        this.myVideo6 = false;
         this.openBord = true;
         this.communicTrainer = true;
+        this.showVideoInstruct = true;
     }
 }
 

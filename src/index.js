@@ -8,11 +8,13 @@ import User from './user';
 
 const app = angular.module('app', [
   'ui.router',
+  'ui.bootstrap',
   'ngCookies',
   'ngStorage',
   'timer',
   'slick',
   'swagger.api',
+  'angAccordion',
   api.name,
   bbetter.name
 ]);

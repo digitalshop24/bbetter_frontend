@@ -259,14 +259,19 @@ a, button {
   margin-top: -30px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  a {
-    color: #fff !important;
-    font-size: 15px !important;
-    cursor: pointer;
-  }
+
   p {
     padding-bottom: 5px;
+    a {
+      color: #fff ;
+      font-size: 15px !important;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #D8003D;
+    }
   }
+  
 }
 .menuLogin:hover {
   display: block;

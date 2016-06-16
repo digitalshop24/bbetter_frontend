@@ -1,13 +1,13 @@
 <div>
-  <section class="notif">
+  <section class="notif" ng-show="ctrl.openBord">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="notifWrap">
+          <div class="notifWrap" >
             <h2>
             <img src="img/notif.png" alt="" />
             Не забыть сделать видео недельных соревнований и выслать до 23.59</h2>
-            <p>Закрыть</p>
+            <p ng-click="ctrl.openBord = !ctrl.openBord"><a href="">Закрыть</a></p>
           </div>
         </div>
       </div>
@@ -410,10 +410,9 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Связь с тренером</h1>
-          <form>
+          <form ng-submit="ctrl.communicTrainer = false" ng-show="ctrl.communicTrainer">
             <div class="row">
               <div class="col-md-offset-3 col-md-6">
-
               </div>
               <!--  <div class="col-md-offset-2 col-md-8">
                   <ul class="typeInput">
@@ -438,6 +437,9 @@
             </div>
 
           </form>
+          <div class="thankU text-center" ng-show="!ctrl.communicTrainer" style="display: block; color:#fff;">
+              <h2>Спасибо, Ваше письмо отправлено!</h2>
+          </div>
         </div>
       </div>
     </div>

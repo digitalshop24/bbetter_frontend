@@ -7,6 +7,8 @@ export default class ProfileCtrl {
         this.video4 = false;
         this.video5 = false;
         this.video6 = false;
+        this.openBord = true;
+        this.communicTrainer = true;
     }
 }
 

@@ -91,7 +91,7 @@ h2,p {
       border-radius: 0 10px 10px 0;
     }
     .btn_right {
-      margin-left: 20px; 
+      margin-left: 20px;
       border-radius:10px;
     }
   }
@@ -126,13 +126,13 @@ h2,p {
   background-color: #e8698d;
   background-image: url("img/weekPlan/bgPlan.png");
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center center;
   .h3Fix {
   	height: 136px;
   }
   button {
-    margin: 5px 5px 20px 5px; 
+    margin: 5px 5px 20px 5px;
     width: 163px;
     padding: 10px 0;
   }
@@ -141,7 +141,7 @@ h2,p {
       font-size: 50px;
       font-weight: bold;
       margin: 0;
-      padding: 70px 0 30px 0; 
+      padding: 70px 0 30px 0;
       font-family: meta;
   }
   .table_plan {
@@ -194,7 +194,7 @@ h2,p {
   background-color: #52acff;
   background-image: url("img/calk/bgCalcul.png");
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center center;
   padding-bottom: 100px;
   input,select {
@@ -210,7 +210,7 @@ h2,p {
   -webkit-appearance: none;
     background-repeat: no-repeat;
     -moz-appearance: none;
-    text-indent: 0.01px; 
+    text-indent: 0.01px;
     text-overflow: '';
     /* for IE */
     -ms-appearance: none;
@@ -298,28 +298,8 @@ h2,p {
     background-color: #d8003d;
     border-bottom: 10px solid #d8003d;
     border-top: 10px solid #d8003d;
-  } 
+  }
 }
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-
-.trainMail {
-  background-color: #52acff;
-  background-image: url("img/bg_form.png");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  background-position: center center;
-  .foto {
-    color: #fff;
-    font-size: 18px;
-  }
-  .load {
-    color: #fff;
-    margin: 20px 30px 30px 0; 
-    font-size: 18px;
-  }
-  .btn_black {
-    margin-bottom: 50px;
-  }
-}

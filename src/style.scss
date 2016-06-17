@@ -208,3 +208,12 @@ footer {
   }
 }
 
+input:focus, textarea:focus, select:focus, button:focus{
+  outline:none;
+}
+
+a:hover, a:focus, input {
+  outline: none;
+  text-decoration: none;
+}
+

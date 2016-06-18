@@ -8,7 +8,7 @@ export default class PersonalInfoCtrl {
   }
 
   addMore() {
-    this.summaries.push({});
+    this.summaries = [{}, ...this.summaries];
   }
 
   save(summaries) {
@@ -26,7 +26,7 @@ export default class PersonalInfoCtrl {
     });
 
     return Promise.all(promises)
-      .then(() => this.state.go('.'));
+      .then(() => this.state.go('.', {}, {reload: true}));
   }
 
   createSummary(summary) {

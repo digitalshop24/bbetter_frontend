@@ -3,9 +3,7 @@ import controller from './controller';
 import template from './template';
 import style from './style';  // eslint-disable-line
 
-export default angular.module('bbetter.file-upload-button', [
-  'angularFileUpload'
-])
+export default angular.module('bbetter.file-upload-button', [])
 .directive('fileChange', $parse => {
   "ngInject";
   return {

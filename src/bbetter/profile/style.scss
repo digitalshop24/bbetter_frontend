@@ -118,79 +118,6 @@ h2,p {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
-.calculate {
-  background-color: #52acff;
-  background-image: url("img/calk/bgCalcul.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-bottom: 100px;
-  input,select {
-      border: none;
-      border-radius:50px;
-      background-color: #f5f5f5;
-      color: #a0a0a0;
-      font-size: 20px;
-      padding: 10px;
-      width: 150px;
-  }
-  select {
-  -webkit-appearance: none;
-    background-repeat: no-repeat;
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    /* for IE */
-    -ms-appearance: none;
-    appearance: none !important;
-    background-image: url('img/calk/arrowBottom.png');
-    background-position: right 15px;
-  }
-  select::-ms-expand {
-      display: none;
-  }
-  p {
-    color: #fff;
-    padding: 30px 0;
-  }
-  h2 {
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      font-family: meta;
-      padding: 25px 0;
-  }
-  ul {
-    width: 30%;
-    display: inline-block;
-    li {
-      font-size: 30px;
-      color: #fff;
-      font-family: meta;
-      span {
-        color: #000;
-        font-size: 32px;
-
-      }
-    }
-    li:nth-child(1) {
-      font-size: 30px;
-      color: #000;
-    }
-    li:nth-child(2) {
-      font-size: 50px;
-      color: #fff;
-      padding: 10px 0;
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
-
-=======
->>>>>>> 9e8da0f851f0b2535d494e2af841bb2e4de900df
 .video_otchet {
   .col-md-12 {
     padding: 0;
@@ -234,23 +161,3 @@ h2,p {
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-
-.trainMail {
-  background-color: #52acff;
-  background-image: url("img/bg_form.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  .foto {
-    color: #fff;
-    font-size: 18px;
-  }
-  .load {
-    color: #fff;
-    margin: 20px 30px 30px 0;
-    font-size: 18px;
-  }
-  .btn_black {
-    margin-bottom: 50px;
-  }
-}

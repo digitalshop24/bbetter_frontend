@@ -2,11 +2,13 @@ import angular from 'angular';
 import controller from './controller';
 import template from './template';
 import calorieCalculator from './calorie-calculator';
+import contactTrainer from './contact-trainer';
 import personalInfo from './personal-info';
 import style from './style';  //eslint-disable-line
 
 export default angular.module('bbetter.profile', [
   calorieCalculator.name,
+  contactTrainer.name,
   personalInfo.name
 ])
   .config($stateProvider => {

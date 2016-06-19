@@ -8,8 +8,8 @@ import style from './style';  //eslint-disable-line
 import ProfileCtrl from './controller.js';
 
 export default angular.module('bbetter.profile', [
-  personalInfo.name
-  calorieCalculator.name
+  personalInfo.name,
+  calorieCalculator.name,
   contactTrainer.name
 ])
   .config($stateProvider => {

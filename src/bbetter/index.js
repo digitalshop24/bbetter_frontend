@@ -13,7 +13,6 @@ export default angular.module('bbetter', [
   header.name,
   landing.name,
   profile.name,
-  // initSlider.name
 ])
 .config($stateProvider => {
   "ngInject";

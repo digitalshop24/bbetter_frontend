@@ -1,12 +1,18 @@
 import angular from 'angular';
 import controller from './controller';
 import template from './template';
+<<<<<<< HEAD
 import personalInfo from './personal-info';
+=======
+import calorieCalculator from './calorie-calculator';
+>>>>>>> feature/calories-calculator
 import style from './style';  //eslint-disable-line
 import ProfileCtrl from './controller.js';
 
 export default angular.module('bbetter.profile', [
   personalInfo.name
+  calorieCalculator.name
+
 ])
   .config($stateProvider => {
     'ngInject';

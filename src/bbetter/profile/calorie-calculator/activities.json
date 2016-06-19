@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Минимальная",
+    "coefficient": 1.2
+  },
+  {
+    "name": "Слабая",
+    "coefficient": 1.375
+  },
+  {
+    "name": "Средняя",
+    "coefficient": 1.55
+  },
+  {
+    "name": "Высокая",
+    "coefficient": 1.725
+  },
+  {
+    "name": "Экстра-активность",
+    "coefficient": 1.9
+  }
+]

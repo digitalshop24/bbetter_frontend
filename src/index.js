@@ -14,7 +14,6 @@ const app = angular.module('app', [
   'timer',
   'slick',
   'swagger.api',
-  'angAccordion',
   api.name,
   bbetter.name
 ]);

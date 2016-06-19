@@ -10,7 +10,7 @@
       <div class="col-md-12 text-left form">
         <form name="summariesForm" ng-submit="$ctrl.save($ctrl.summaries)">
           <div ng-repeat="summary in $ctrl.summaries | orderBy:'-'" class="summary">
-            <input type="text" placeholder="Мотивирующие слова" ng-model="summary.motivation_words" class="motivation_word">
+            <input type="text" placeholder="Мотивирующие слова" ng-model="summary.motivation_words" class="motivation_word" required>
             <div class="row">
               <div class="col-md-9">
                 <file-upload-button ng-hide="summary.before" file-url="summary.before" label="Загрузить &laquo;До&raquo;" class="btn_left"></file-upload-button>

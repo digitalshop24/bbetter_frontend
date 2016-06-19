@@ -1,6 +1,8 @@
 'use strict';
 export default class ProfileCtrl {
-	constructor() {
+	constructor(summaries) {
+        "ngInject";
+        this.summaries = summaries;
         this.video1 = true;
         this.video2 = false;
         this.video3 = false;
@@ -18,7 +20,3 @@ export default class ProfileCtrl {
         this.showVideoInstruct = true;
     }
 }
-
-
-
-

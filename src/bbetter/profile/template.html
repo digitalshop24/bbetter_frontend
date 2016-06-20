@@ -196,120 +196,8 @@
       </div>
     </div>
   </section>
-  <section class="video_otchet">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 text-right">
-          <h2 ng-class="ctrl.showVideoInstruct ? 'active_title' : ' '" ng-click="ctrl.showVideoInstruct = true">Видео-инструкции</h2>
-        </div>
-        <div class="col-md-6 text-left">
-          <h2 ng-class="!ctrl.showVideoInstruct ? 'active_title' : ' '" ng-click="ctrl.showVideoInstruct = false">Мои видео-отчеты</h2>
-        </div>
-        <div ng-show="ctrl.showVideoInstruct">
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video1 ? 'round_active':' '" ng-click="ctrl.video1 = !ctrl.video1">
-              <h2>1</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.video1 ? 'accord_active':' '">
-              <img src="img/youtube.png"  alt="" ng-show="ctrl.video1">
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video2 ? 'round_active':' '" ng-click="ctrl.video2 = !ctrl.video2">
-              <h2>2</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.video2 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.video2">
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video3 ? 'round_active':' '" ng-click="ctrl.video3 = !ctrl.video3">
-              <h2>3</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.video3 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.video3">
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video4 ? 'round_active':' '" ng-click="ctrl.video4 = !ctrl.video4">
-              <h2>4</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.video4 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.video4">
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video5 ? 'round_active':' '" ng-click="ctrl.video5 = !ctrl.video5">
-              <h2>5</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.video5 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.video5">
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.video6 ? 'round_active':' '" ng-click="ctrl.video6 = !ctrl.video6">
-              <h2>6</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.video6 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.video6">
-            </div>
-          </div>
-        </div>
-         <!--  video instructions -->
-        <div ng-show="!ctrl.showVideoInstruct">
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo1 ? 'round_active':' '" ng-click="ctrl.myVideo1 = !ctrl.myVideo1">
-              <h2>1</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.myVideo1 ? 'accord_active':' '">
-              <button class="btn_black" ng-show="ctrl.myVideo1">Загрузить видео</button>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo2 ? 'round_active':' '" ng-click="ctrl.myVideo2 = !ctrl.myVideo2">
-              <h2>2</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.myVideo2 ? 'accord_active':' '">
-                <button class="btn_black" ng-show="ctrl.myVideo2">Загрузить видео</button>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo3 ? 'round_active':' '" ng-click="ctrl.myVideo3 = !ctrl.myVideo3">
-              <h2>3</h2>
-            </div>
-            <div class="accord" ng-class="ctrl.myVideo3 ? 'accord_active':' '">
-                <button class="btn_black" ng-show="ctrl.myVideo3">Загрузить видео</button>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo4 ? 'round_active':' '" ng-click="ctrl.myVideo4 = !ctrl.myVideo4">
-              <h2>4</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.myVideo4 ? 'accord_active':' '">
-                <button class="btn_black" ng-show="ctrl.myVideo4">Загрузить видео</button>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo5 ? 'round_active':' '" ng-click="ctrl.myVideo5 = !ctrl.myVideo5">
-              <h2>5</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.myVideo5 ? 'accord_active':' '">
-                <button class="btn_black" ng-show="ctrl.myVideo5">Загрузить видео</button>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-            <div class="round " ng-class="ctrl.myVideo6 ? 'round_active':' '" ng-click="ctrl.myVideo6 = !ctrl.myVideo6">
-              <h2>6</h2>
-            </div>
-             <div class="accord " ng-class="ctrl.myVideo6 ? 'accord_active':' '">
-                <img src="img/youtube.png" alt="" ng-show="ctrl.myVideo6">
-            </div>
-          </div>
-        </div>
-         <!-- my video -->         
-      </div>
-    </div>
-  </section>
+
+  <bbetter-videos instructions="ctrl.instructions" reports="ctrl.reports"></bbetter-videos>
 
   <section class="rulesSec">
     <div class="container">
@@ -338,6 +226,7 @@
       </div>
     </div>
   </section>
+
   <bbetter-contact-trainer></bbetter-contact-trainer>
 
 <!--   <section class="sendMailSec trainMail">

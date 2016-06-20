@@ -1,16 +1,17 @@
 import angular from 'angular';
 import controller from './controller';
 import template from './template';
-import personalInfo from './personal-info';
 import calorieCalculator from './calorie-calculator';
 import contactTrainer from './contact-trainer';
+import personalInfo from './personal-info';
+import videos from './videos';
 import style from './style';  //eslint-disable-line
-import ProfileCtrl from './controller.js';
 
 export default angular.module('bbetter.profile', [
-  personalInfo.name,
   calorieCalculator.name,
-  contactTrainer.name
+  contactTrainer.name,
+  personalInfo.name,
+  videos.name
 ])
   .config($stateProvider => {
     'ngInject';
@@ -24,6 +25,14 @@ export default angular.module('bbetter.profile', [
 
           return api.getV1Summaries({authToken})
             .catch(response => console.error(response));
+        },
+        /* Hardcoded instructions */
+        instructions: () => [{}, {}, {}, {}, {}, {}],
+        reports: (api, user) => {
+          "ngInject";
+          const {token: authToken} = user;
+
+          return api.getV1Videos({authToken});
         }
       },
       template,

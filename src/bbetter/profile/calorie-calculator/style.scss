@@ -67,3 +67,16 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .calculate {
+    padding-bottom: 20px;
+    form {
+      input, select {
+        margin-bottom: 20px;
+      }
+      select.activity {
+        margin: 0;
+      }
+    }
+  }
+}

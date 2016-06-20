@@ -184,12 +184,13 @@ footer {
   padding: 0 10em;
   .navWrap {
     flex:1 0 auto;
-    a {
-      color:#000;
-      text-align: left;
-      &:hover,&:focus {
-        color:$red;
-      }
+  }
+  a {
+    color:#000;
+    text-align: left;
+    transition:color .4s;
+    &:hover,&:focus {
+      color:$red;
     }
   }
   .socialWrap {

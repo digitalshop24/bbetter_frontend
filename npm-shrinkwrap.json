@@ -47,6 +47,11 @@
       "from": "angular-cookies@latest",
       "resolved": "https://registry.npmjs.org/angular-cookies/-/angular-cookies-1.5.6.tgz"
     },
+    "angular-socialshare": {
+      "version": "2.2.0",
+      "from": "angular-socialshare@*",
+      "resolved": "https://registry.npmjs.org/angular-socialshare/-/angular-socialshare-2.2.0.tgz"
+    },
     "angular-ui-bootstrap": {
       "version": "1.3.3",
       "from": "angular-ui-bootstrap@latest",
@@ -1781,10 +1786,32 @@
       "from": "fresh@0.3.0",
       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.3.0.tgz"
     },
+    "fs.realpath": {
+      "version": "1.0.0",
+      "from": "fs.realpath@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
+    },
+    "fsevents": {
+      "version": "1.0.12",
+      "from": "fsevents@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.0.12.tgz"
+    },
     "fstream": {
       "version": "1.0.9",
       "from": "fstream@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/fstream/-/fstream-1.0.9.tgz"
+    },
+    "fstream-ignore": {
+      "version": "1.0.5",
+      "from": "fstream-ignore@>=1.0.3 <1.1.0",
+      "resolved": "https://registry.npmjs.org/fstream-ignore/-/fstream-ignore-1.0.5.tgz",
+      "dependencies": {
+        "minimatch": {
+          "version": "3.0.2",
+          "from": "minimatch@>=3.0.0 <4.0.0",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.2.tgz"
+        }
+      }
     },
     "gauge": {
       "version": "1.2.7",
@@ -3078,6 +3105,18 @@
       "from": "node-libs-browser@>=0.4.0 <=0.6.0",
       "resolved": "https://registry.npmjs.org/node-libs-browser/-/node-libs-browser-0.5.3.tgz"
     },
+    "node-pre-gyp": {
+      "version": "0.6.28",
+      "from": "node-pre-gyp@>=0.6.25 <0.7.0",
+      "resolved": "https://registry.npmjs.org/node-pre-gyp/-/node-pre-gyp-0.6.28.tgz",
+      "dependencies": {
+        "semver": {
+          "version": "5.1.0",
+          "from": "semver@>=5.1.0 <5.2.0",
+          "resolved": "https://registry.npmjs.org/semver/-/semver-5.1.0.tgz"
+        }
+      }
+    },
     "node-status-codes": {
       "version": "1.0.0",
       "from": "node-status-codes@>=1.0.0 <2.0.0",
@@ -4238,6 +4277,23 @@
       "from": "tar@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/tar/-/tar-2.2.1.tgz"
     },
+    "tar-pack": {
+      "version": "3.1.3",
+      "from": "tar-pack@>=3.1.0 <3.2.0",
+      "resolved": "https://registry.npmjs.org/tar-pack/-/tar-pack-3.1.3.tgz",
+      "dependencies": {
+        "isarray": {
+          "version": "1.0.0",
+          "from": "isarray@>=1.0.0 <1.1.0",
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
+        },
+        "readable-stream": {
+          "version": "2.0.6",
+          "from": "readable-stream@>=2.0.4 <2.1.0",
+          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.6.tgz"
+        }
+      }
+    },
     "tar-stream": {
       "version": "1.5.2",
       "from": "tar-stream@>=1.1.1 <2.0.0",
@@ -4388,6 +4444,11 @@
       "version": "1.0.2",
       "from": "uglify-to-browserify@>=1.0.0 <1.1.0",
       "resolved": "https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz"
+    },
+    "uid-number": {
+      "version": "0.0.6",
+      "from": "uid-number@>=0.0.6 <0.1.0",
+      "resolved": "https://registry.npmjs.org/uid-number/-/uid-number-0.0.6.tgz"
     },
     "underscore": {
       "version": "1.6.0",

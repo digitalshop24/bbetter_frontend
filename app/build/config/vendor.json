@@ -14,7 +14,8 @@
     "node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js",
     "bower_components/slick-carousel/slick/slick.js",
     "bower_components/angular-slick/dist/slick.min.js",
-    "bower_components/ang-accordion/js/ang-accordion.js"
+    "bower_components/ang-accordion/js/ang-accordion.js",
+    "node_modules/angular-socialshare/dist/angular-socialshare.min.js"
   ],
   "styles": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",

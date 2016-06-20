@@ -14,6 +14,7 @@ const app = angular.module('app', [
   'timer',
   'slick',
   'swagger.api',
+  '720kb.socialshare',
   api.name,
   bbetter.name
 ]);

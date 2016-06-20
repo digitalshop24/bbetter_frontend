@@ -23,7 +23,7 @@ export default angular.module('bbetter-videos', [
     if (recordingUrl) {
       return $sce.trustAsResourceUrl(`https://youtube.com/embed/${recordingUrl}`);
     }
-    console.log(trustedUrl);
+
     return trustedUrl;
   };
 });

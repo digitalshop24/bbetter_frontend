@@ -657,12 +657,17 @@ $red:#d8003d;
     padding: 30px 0;
     .wrpapRulIcon {
       margin:0;
-    }
-    .imgWrap {
-      &:before,&:after{
-        display: none;
+      .item {
+        max-width:none;
+        .imgWrap {
+          text-align: center;
+          &:before,&:after{
+            display: none;
+          }
+        }
       }
     }
+    
   }
 }
 ////////////////////////////////////////////////////////////////////

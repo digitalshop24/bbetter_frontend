@@ -31,7 +31,7 @@
               <div ng-show="$ctrl.selectedReport === report">
                 <iframe ng-show="report.youtube_code" width="822" height="410" src="{{report.youtube_code | trustedYoutubeUrl}}" allofullscreen></iframe>
                 <div ng-hide="report.youtube_code" >
-                  <form ng-submit="$ctrl.uploadVideo(youtubeUrl)">
+                  <form ng-submit="$ctrl.uploadVideo($index + 1, youtubeUrl)">
                     <div class="row-md-12">
                       <input class="btn_black" ng-model="youtubeUrl"placeholder="Код видео на YouTube.com"></input>
                     </div>

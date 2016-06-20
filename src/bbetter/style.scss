@@ -109,7 +109,27 @@ a, button {
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .tariffSec {
+    .wrapper{
+      flex-wrap: wrap;
+      max-height: none;
+      .itWrap {
+        width:200px;
+        height: 270px;
+        margin: auto;
+        button{
+         margin: 0px auto 40px; 
+        }
+        .DrugsBtnWrap {
+          button {
+            top: -40px;
+          }
+        }
+      }
+    }
+  }
+}
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
@@ -123,6 +143,17 @@ a, button {
     margin:60px auto 100px;
     max-width: 34em;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regimAndFoodSec{
+    padding:20px 0;
+    p {
+      margin:30px auto;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }
 

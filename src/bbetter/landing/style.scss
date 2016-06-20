@@ -332,9 +332,7 @@ $red:#d8003d;
         margin-left: 45px;
         display: block;
       }
-
     } 
-
     ul {
       margin-bottom: 30px;
       li {
@@ -420,6 +418,53 @@ $red:#d8003d;
     }
   }
 }
+ @media screen and (max-width: 768px) { 
+  .contestSec {
+    .rightSide {
+      ul {
+        li:not(:last-child){
+          margin: 15px 0;
+        }
+        li {
+          span {
+            top:5px;
+            margin:0;
+          }
+          span.some {
+            white-space:nowrap;
+            right: 10px;
+          }
+          &:nth-child(1) {
+            background-color:$red;
+            background-image: none;
+          }
+          &:nth-child(2) {
+            background-color:rgba(255,89,136,.3);
+            background-image: none;
+          }
+          &:nth-child(3) {
+            background-image: none;
+            background-color:rgba(255,255,255,.5);
+          }
+          &:nth-child(4) {
+            background-image: none;
+            background-color:rgba(0,0,0,.5);
+            span.some {
+              top: 95px;
+            }
+          } 
+        }
+      }
+      h3{
+        margin: 0 5px 0 0;
+        font-size: 22px;
+        i {
+          margin:0;
+        }
+      }
+    }
+  }
+ }
 
 
 ////////////////////////////////////////////////////////////////////
@@ -435,6 +480,17 @@ $red:#d8003d;
     margin:60px auto 100px;
     max-width: 42em;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .historySec{
+    padding:20px 0;
+    p {
+      margin:30px auto;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }
 
@@ -508,6 +564,13 @@ $red:#d8003d;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .beforeAfterSec {
+    .beforeAfter{
+      margin: 30px 0;
     }
   }
 }
@@ -589,7 +652,19 @@ $red:#d8003d;
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .offlineTrainingSec {
+    padding: 30px 0;
+    .wrpapRulIcon {
+      margin:0;
+    }
+    .imgWrap {
+      &:before,&:after{
+        display: none;
+      }
+    }
+  }
+}
 ////////////////////////////////////////////////////////////////////
 //////wrpapRulIcon COMMON FOR offlineTrainingSec and rulesSec//////
 
@@ -1075,8 +1150,4 @@ $red:#d8003d;
     position: relative;
     left: 5px;
   }
-}
-
-.collapseParth {
-
 }

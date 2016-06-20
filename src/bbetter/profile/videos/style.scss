@@ -1,0 +1,47 @@
+.video_otchet {
+  margin: 30px 0 0 0;
+  .col-md-12 {
+    padding: 0;
+  }
+  .active_title {
+    text-decoration: underline;
+  }
+  .round {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      position: absolute;
+      background-color: #f5f5f5;
+      left: 44.3%;
+      margin-top: 20px;
+      z-index: 1;
+      clip: rect(auto, auto, 70px, auto);
+      h2 {
+        color: #d8003d;
+      }
+  }
+  .round_active {
+    background-color: #d8003d;
+    h2 {
+      color: #fff;
+    }
+  }
+  .accord {
+    border-bottom: 5px solid #f5f5f5;
+    border-top: 5px solid #f5f5f5;
+    position: relative;
+    z-index: 2;
+    margin-top: 90px;
+    // min-height: 130px;
+    background-color: #fff;
+    .btn_black {
+      margin: 20px 0;
+    }
+  }
+
+  .accord_active {
+    background-color: #d8003d;
+    border-bottom: 10px solid #d8003d;
+    border-top: 10px solid #d8003d;
+  }
+}

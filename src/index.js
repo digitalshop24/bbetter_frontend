@@ -15,7 +15,6 @@ const app = angular.module('app', [
   'slick',
   'swagger.api',
   '720kb.socialshare',
-  'ngYoutubeEmbed',
   api.name,
   bbetter.name
 ]);

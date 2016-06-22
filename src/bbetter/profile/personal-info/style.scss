@@ -14,7 +14,9 @@
       top: 9px;
     }
   }
+
   .form {
+    margin-top: 40px; //temporary
     .summary {
       margin-bottom: 20px;
     }
@@ -69,6 +71,7 @@
         margin-bottom: 25px;
     }
   }
+  
   .user_paramentry {
     ul {
       display: inline-block;
@@ -82,6 +85,7 @@
       }
     }
   }
+
   .footer_user_data {
     margin-bottom: 50px;
     .redBtn {
@@ -91,4 +95,26 @@
       padding: 20px 0;
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  .user_data {
+    .form {
+      .summary {
+        .motivation_word {
+          margin-bottom: 20px;
+        }
+        file-upload-button{
+          width: 100%;
+        }
+        file-upload-button.btn_left,
+        file-upload-button.btn_right,
+        file-upload-button.btn_center {
+          border-radius:10px;
+          margin:0;
+        }
+      }
+    }
+  }
+
 }

@@ -46,53 +46,52 @@ $red:#d8003d;
 
 .accordeonSection {
   .tariffsCarousel {
-    .tariffs {
-      margin: 0;
+    margin:0;
+    text-align: center;
+    div {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-height: 460px;
       .item {
-        background-size: cover;
-        background-position: center;
-        min-height: 667px;
-        .overlay {
-          padding:20px;
-          min-height: 667px;
-        }
-        h2 {
-          font-weight:800;
-          font-family: meta;
-          font-size: 35px;
-        }
-        p {
-          font-size: 18px;
-          span {
-            color:$red;
-            display: block;
-
-            margin: 20px 0 10px; 
-            font-weight:800;
-            font-size: 22px;
-            font-family: meta;
-          }
-        }
-        .redBtn {
-          display: block;
-          margin: 20px auto;
-        } 
-
+        padding:50px;
+        
       }
-      .slick-dots{
-        bottom: -10px;
-        position: absolute;
-          li {
-            border:1px solid #000;
-            background-color: transparent;
-            border-radius:50%;
-            width: 15px;
-            height: 15px;
-          }
-          li.slick-active {
-            background-color: #000;
-          }
-        }
+      h2 {
+        color:$red;
+        font-size:32px;
+        font-weight:800;
+        margin-bottom: 20px;
+      }
+      span {
+        margin-bottom: 20px;
+        color:$red;
+        display: block;
+        font-weight:800;
+      }
+      p {
+        color:#fff;
+        margin-bottom:20px;
+        line-height: 17px
+      }
+    }
+    div.t1 {
+      background-image: url("img/accordeon/1.png");
+      .item {
+        background-color:rgba(0,0,0,.5);
+      }
+    }
+    div.t2 {
+      background-image: url("img/accordeon/2.png");
+      .item {
+        background:rgba(0,0,0,0.5);
+      }
+    }
+    div.t3 {
+      background-image: url("img/accordeon/3.png");
+      .item {
+        background-color: rgba(0,0,0,.5);
+      }
     }
   }
   .accordion {
@@ -626,6 +625,15 @@ $red:#d8003d;
   }
 }
 
+ @media screen and (max-width: 768px) {
+  .quoteSec {
+    padding:30px 0;
+    .quote:after,quote:before{
+      display: none;
+    }
+  }
+ }
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
@@ -667,9 +675,9 @@ $red:#d8003d;
         }
       }
     }
-    
   }
 }
+
 ////////////////////////////////////////////////////////////////////
 //////wrpapRulIcon COMMON FOR offlineTrainingSec and rulesSec//////
 
@@ -718,6 +726,22 @@ $red:#d8003d;
      }
   }
 
+  @media screen and (max-width: 768px) {
+  
+  .wrpapRulIcon {
+    margin:0;
+    .item {
+      max-width:none;
+      .imgWrap {
+        text-align: center;
+        &:before,&:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 //////wrpapRulIcon COMMON FOR offlineTrainingSec and rulesSec///////
 ////////////////////////////////////////////////////////////////////
 
@@ -753,7 +777,6 @@ $red:#d8003d;
             background-repeat: no-repeat;
             border-radius: 50%;
             display: inline-block;
-
           }
           span:nth-child(1).artem {
             background-image:url('img/feedbackSec/2_tren.jpg');
@@ -816,6 +839,37 @@ $red:#d8003d;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedbackSec {
+    padding:30px 0;
+    .feedbackCarousel {
+      margin: 0;
+      .item {
+        padding: 0 5px;
+        display: flex;
+        flex-wrap: wrap;
+        li:nth-child(1) {
+         padding: 0;
+         label {
+          span:nth-child(2){
+            position: absolute;
+            margin-left:0;
+            font-size:18px;
+           }
+         }
+        }
+        li:nth-child(2) {
+          position: absolute;
+          margin:90px 0 0 20px;
+        }
+        li:nth-child(3){
+          max-width:none;
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -925,6 +979,15 @@ $red:#d8003d;
             margin: auto;
           }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .FAQsec {
+    padding:30px 0;
+    h1 {
+      margin:0 auto;
     }
   }
 }

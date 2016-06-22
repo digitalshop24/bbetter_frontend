@@ -3,8 +3,6 @@ export default class VideosCtrl {
     "ngInject";
     this.api = api;
     this.user = user;
-    this.link = 'https://www.youtube.com/watch?v=OPmOXJtxxoo';
-    console.log('link',this.link);
 
     this.reports = this.updateReportsToBeLengthOf6(this.reports);
     console.log(this.reports);

@@ -380,6 +380,12 @@ $red:#d8003d;
         background-image: url('img/priziSection/3Bg.png');
       }
       li:nth-child(4) {
+        color: $red;
+        background-image: url('img/priziSection/2Bg.png');
+        background-size: 70%;
+        margin-right: 25px;
+      }
+      li:nth-child(5) {
         font-size: 26px;
         padding:25px 0;
         color: #fff;
@@ -394,6 +400,7 @@ $red:#d8003d;
           color:#fff;
         }
       }
+
 
     }
   }
@@ -475,9 +482,12 @@ $red:#d8003d;
   background-size: cover;
   background-position: bottom;
   color: #fff;
+  h1 {
+    margin-bottom: 20px;
+  }
   p {
-    margin:60px auto 100px;
-    max-width: 42em;
+    margin:0 auto 10px;
+    max-width: 60em;
     font-size: 18px;
   }
 }

@@ -16,7 +16,8 @@
     "bower_components/slick-carousel/slick/slick.js",
     "bower_components/angular-slick/dist/slick.min.js",
     "bower_components/ang-accordion/js/ang-accordion.js",
-    "node_modules/angular-socialshare/dist/angular-socialshare.min.js"
+    "node_modules/angular-socialshare/dist/angular-socialshare.min.js",
+    "node_modules/ng-youtube-embed/build/ng-youtube-embed.min.js"
   ],
   "styles": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",

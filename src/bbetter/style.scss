@@ -295,7 +295,6 @@ a, button {
   position: relative;
   height: 0;
   z-index: 100;
-  
   .menuLoginWrap {
     margin: -30px auto 0;
     padding-top: 40px;
@@ -319,12 +318,28 @@ a, button {
   }
   
 }
-.menuLogin:hover {
+
+.menuLogin:hover,
+.menuLogin:focus {
   display: block;
   .menuLoginWrap {
     opacity:1;
   }
 }
+.menuLoginBtn:focus {
+ outline:none;
+}
+.menuLoginBtn:focus ~ .menuLogin{
+ display: block;
+ .menuLoginWrap {
+    opacity:1;
+  }
+}
+
+
 .menuLoginBtn:hover + .menuLogin {
   display: block;
+  .menuLoginWrap {
+    opacity:1;
+  }
 }

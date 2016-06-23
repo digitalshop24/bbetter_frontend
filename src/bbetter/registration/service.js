@@ -14,11 +14,9 @@ export default class RegistationCtrl {
     this.user = user;
     this.modal = modal;
     this.state = $state;
-    console.log('//////////////////////////////////');
   }
 
   registration() {
-  	console.log('//////////////////////////////////12341234');
     return this.modal.open({
       controller: RegistartionCtrl,
       template: registartionTemplate

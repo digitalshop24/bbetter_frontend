@@ -27,7 +27,7 @@
             <h2>Карьеристка</h2>
             <span>Когда карьера занимает все твои мысли и все твое время, трудно выделить в расписании время для спорта. Распространенная проблема!</span>
             <p>«Быть Лучше» - это для тебя! Ты экономишь время на поездках в зал Ты не тратишь часы на поиски подходящей системы питания. Ты делаешь себя лучше в своем личном ритме. Ты становишься все красивее - и за это получаешь призы и подарки! </p>
-            <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registration()" type="button">Начать!</button>
+            <button class="redBtn tarifBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()" type="button">Начать!</button>
            <!--  <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</button> -->
             </li>
           </ul>
@@ -38,7 +38,7 @@
                 <h2>Беззаботная</h2>
                 <span>Жизнь – это большой праздник! Зачем забивать себе голову лишними проблемами, когда уже есть готовое решение?!</span>
                 <p>Ты экономишь на абонементе в спортзал и покупаешь новое платье. Ты не мучаешься, составляя себе план тренировок и питания. Ты всегда можешь рассчитывать на советы личного тренера и диетолога. Ты становишься все красивее - и за это получаешь призы и подарки! </p>
-                <button class="redBtn tarifBtn">Начать!</button>
+                <button class="redBtn tarifBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
               </li>
             </ul>
         </div> 
@@ -48,7 +48,7 @@
                 <h2>Домохозяйка</h2>
                 <span>Быть хранительницей очага – трудная работа. Иногда тебе кажется, что в сутках не больше 10 часов! Как найти время на себя?</span>
                 <p>«Быть Лучше» - это для тебя! Ты занимаешься спортом не выходя из дома. Ты получаешь простую схему питания и не тратишь много времени на готовку. Ты можешь тренироваться в любое свободное время. Ты становишься все красивее - и за это получаешь призы и подарки!</p>
-                <button class="redBtn tarifBtn">Начать!</button>
+                <button class="redBtn tarifBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
               </li>
             </ul>
         </div>    
@@ -70,7 +70,7 @@
 
                  «Быть Лучше» - это для тебя!<br/> Ты экономишь время на поездках в зал<br/> Ты не тратишь часы на поиски подходящей системы питания.<br/> Ты делаешь себя лучше в своем личном ритме.<br/> Ты становишься все красивее - и за это получаешь призы и подарки!
 
-                  <button class="redBtn tarifBtn"  ng-show="!$ctrl.user.authorized">Начать!</button>
+                  <button class="redBtn tarifBtn"  ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
                   </p>
                 </a>
               </div>
@@ -88,7 +88,7 @@
                   <p>
                   <span>Жизнь – это большой праздник! Зачем забивать себе голову лишними проблемами, когда уже есть готовое решение?!</span><br/>                      
                   Ты экономишь на абонементе в спортзал и покупаешь новое платье.<br/>Ты не мучаешься, составляя себе план тренировок и питания.<br/>Ты всегда можешь рассчитывать на советы личного тренера и диетолога.<br/>Ты становишься все красивее - и за это получаешь призы и подарки!
-                  <button class="redBtn tarifBtn">Начать!</button>
+                  <button class="redBtn tarifBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
                   </p>
                 </a>
               </div>
@@ -106,7 +106,7 @@
 
                   <span>Быть хранительницей очага – трудная работа. Иногда тебе кажется, что в сутках не больше 10 часов! Как найти время на себя?</span><br/> 
                   «Быть Лучше» - это для тебя!<br/> Ты занимаешься спортом не выходя из дома.<br/> Ты получаешь простую схему питания и не тратишь много времени на готовку.<br/> Ты можешь тренироваться в любое свободное время. <br/> Ты становишься все красивее - и за это получаешь призы и подарки!
-                  <button class="redBtn tarifBtn">Начать!</button>
+                  <button class="redBtn tarifBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
                   </p>
                 </a>
               </div>
@@ -114,7 +114,6 @@
           </ul>
         </div>
   </section>
-
   <section class="lineSec" id="fiveStep">
     <h1>Буду лучше за 5 шагов!</h1>
   </section>

@@ -1,20 +1,20 @@
 import angular from 'angular';
 import modal from './modal';
-import registration from './registration';
 import header from './header';
 import footer from './footer/template';
 import landing from './landing';
 import profile from './profile';
 import style from './style';
 import content from './template';
+import registration from './registration';
 
 
 export default angular.module('bbetter', [
   modal.name,
-  registration.name,
   header.name,
   landing.name,
   profile.name,
+  registration.name
 ])
 .config($stateProvider => {
   "ngInject";

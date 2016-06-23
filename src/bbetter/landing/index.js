@@ -1,6 +1,6 @@
 import angular from 'angular';
-import controller from './controller';
 import template from './template';
+import controller from './controller';
 import style from './style';
 
 export default angular.module('bbetter.landing', [])
@@ -9,7 +9,7 @@ export default angular.module('bbetter.landing', [])
     $stateProvider.state('bbetter.landing', {
       controller,
       controllerAs: 'ctrl',
-      template,
+      template, 
       url: '/'
     });
   });

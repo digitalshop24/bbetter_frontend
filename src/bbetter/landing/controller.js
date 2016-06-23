@@ -1,6 +1,13 @@
 'use strict';
+
+import RegistartionCtrl from '../registrationModal/registration/controller';
+import registartionTemplate from '../registrationModal/registration/template';
+
 export default class LandCtrl {
-    constructor() {
+    constructor(user, modal) {
+        "ngInject";
+        this.modal = modal;
+        this.user = user;
         this.responsCarousel = [
             {
               breakpoint: 768,
@@ -106,6 +113,13 @@ export default class LandCtrl {
         	}
 
         ]
+    }
+
+    registration() {
+        return this.modal.open({
+          controller: RegistartionCtrl,
+          template: registartionTemplate
+        });
     }
 }
 

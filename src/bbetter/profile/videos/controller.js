@@ -5,7 +5,6 @@ export default class VideosCtrl {
     this.user = user;
 
     this.reports = this.updateReportsToBeLengthOf6(this.reports);
-    console.log(this.reports);
 
     this.selectedInstruction = this.instructions[0];
     this.selectedReport = this.reports[0];
@@ -44,10 +43,11 @@ export default class VideosCtrl {
     return updated;
   }
 
-  uploadVideo(youtubeUrl) {
+  uploadVideo(day, youtubeUrl) {
     const {token: authToken} = this.user;
+    const code = youtubeUrl.substr(youtubeUrl.length - 11); // 11 lenth of youtube code
 
-    return this.api.postV1Videos({authToken, youtube_code: youtubeUrl})
+    return this.api.postV1Videos({authToken, day, youtube_code: code})
       .then(report => {
         const {day} = report;
 

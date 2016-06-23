@@ -14,8 +14,8 @@
               <span ng-hide="tariff.people_number === 2">&nbsp;человек</span>
             </p>
             <p><span ng-bind="::tariff.price"></span><i class="fa fa-rub"></i></p>
-            <payment-button ng-if="tariff.people_number === 1" button-class="redBtn" title="Это я!" price="tariff.price"></payment-button>
-            <payment-button ng-if="tariff.people_number !== 1" button-class="redBtn" title="Это мы!" price="tariff.price"></payment-button>
+            <payment-button ng-if="tariff.people_number === 1" button-class="redBtn" title="Это я!" tariff="tariff"></payment-button>
+            <payment-button ng-if="tariff.people_number !== 1" button-class="redBtn" title="Это мы!" tariff="tariff"></payment-button>
           </div>
         </div>
       </div>

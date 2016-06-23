@@ -9,7 +9,7 @@ export default angular.module('bbetter.payment-button', [
   bindings: {
     buttonClass: '@',
     title: '@',
-    price: '='
+    tariff: '='
   },
   controller,
   template

@@ -1,6 +1,6 @@
 <div>
   <bbetter-notification ng-show="ctrl.user.accountWasPaid"></bbetter-notification>
-  <bbetter-tariff-info tariffName="ctrl.user.active_tariff.name" ng-show="ctrl.user.accountWasPaid"></bbetter-tariff-info>
+  <bbetter-tariff-info tariff="ctrl.user.active_tariff" ng-show="ctrl.user.accountWasPaid"></bbetter-tariff-info>
   <bbetter-personal-info summaries="ctrl.summaries"></bbetter-personal-info>
 
   <section class="contestSec" id="contestSec">

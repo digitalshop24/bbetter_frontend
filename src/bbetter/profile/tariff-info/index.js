@@ -6,7 +6,7 @@ import style from './style';  // eslint-disable-line
 export default angular.module('bbetter.tariff-info', [])
   .component('bbetterTariffInfo', {
     bindings: {
-      tariffName: "="
+      tariff: "="
     },
     controller,
     template

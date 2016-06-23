@@ -14,15 +14,15 @@
             <div class="row">
 
               <div class="col-sm-12 col-md-9">
-                <file-upload-button ng-hide="summary.before" file-url="summary.before" label="Загрузить &laquo;До&raquo;" class="btn_left"></file-upload-button>
+                <file-upload-button ng-hide="summary.before" file-url="summary.before" label="Загрузить &laquo;До&raquo;" class="btn_left" disabled="!$ctrl.user.accountWasPaid"></file-upload-button>
                 <div ng-show="summary.before" class="preview preview_left">
                   <img ng-src="{{summary.before}}">
                 </div>
-                <file-upload-button ng-hide="summary.after" file-url="summary.after" label="Загрузить &laquo;После&raquo;" class="btn_center"></file-upload-button>
+                <file-upload-button ng-hide="summary.after" file-url="summary.after" label="Загрузить &laquo;После&raquo;" class="btn_center" disabled="!$ctrl.user.accountWasPaid"></file-upload-button>
                 <div ng-show="summary.after" class="preview preview_center">
                   <img ng-src="{{summary.after}}">
                 </div>
-                <file-upload-button ng-hide="summary.motivation" file-url="summary.motivation" label="Загрузить &laquo;Мотивашку&raquo;" class="btn_right"></file-upload-button>
+                <file-upload-button ng-hide="summary.motivation" file-url="summary.motivation" label="Загрузить &laquo;Мотивашку&raquo;" class="btn_right" disabled="!$ctrl.user.accountWasPaid"></file-upload-button>
                 <div ng-show="summary.motivation" class="preview preview_right">
                   <img ng-src="{{summary.motivation}}">
                 </div>
@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="footer_user_data">
-            <div class="col-md-12 text-center ">
+            <div class="col-md-12 text-center" ng-hide="$ctrl.user.accountWasPaid">
               <p class="pink">Загрузка фотографий станет доступной после оплаты тарифа</p>
               <button class="redBtn" type="submit" ng-disabled="summariesForm.$pristine ||summariesForm.$invalid">Сохранить изменения</button>
             </div>

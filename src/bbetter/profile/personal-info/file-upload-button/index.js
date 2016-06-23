@@ -25,6 +25,7 @@ export default angular.module('bbetter.file-upload-button', [])
 .component('fileUploadButton', {
   bindings: {
     label: "@",
+    disabled: "=",
     fileUrl: "="
   },
   controller,

@@ -1,4 +1,4 @@
 <div class="file-upload">
     <span ng-bind="::$ctrl.label"></span>
-    <input type="file" class="upload" ng-model="$ctrl.file" file-change="$ctrl.upload(file)"/>
+    <input type="file" class="upload" ng-model="$ctrl.file" file-change="$ctrl.upload(file)" ng-disabled="$ctrl.disabled">
 </div>

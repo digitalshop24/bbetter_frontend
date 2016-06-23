@@ -1,5 +1,4 @@
-import angular from 'angular';
-import controller from './controller';
+import service from './service';
 
 export default angular.module('bbetter.registration', [])
-  
+  .service('registration', service);

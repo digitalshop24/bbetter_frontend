@@ -14,7 +14,7 @@ export default angular.module('bbetter', [
   registration.name,
   header.name,
   landing.name,
-  profile.name
+  profile.name,
 ])
 .config($stateProvider => {
   "ngInject";

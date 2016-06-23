@@ -54,7 +54,7 @@ $red:#d8003d;
       background-repeat: no-repeat;
       max-height: 460px;
       .item {
-        padding:50px;
+        padding:50px 30px;
         
       }
       h2 {
@@ -91,6 +91,14 @@ $red:#d8003d;
       background-image: url("img/accordeon/3.png");
       .item {
         background-color: rgba(0,0,0,.5);
+      }
+    }
+    .slick-dots {
+      bottom:0;
+      li.slick-active{
+        button::before {
+          color:#fff;
+        }
       }
     }
   }
@@ -898,6 +906,14 @@ $red:#d8003d;
         li:nth-child(3){
           max-width:none;
           margin: 0;
+        }
+      }
+      .slick-dots {
+        bottom:-25px;
+        li.slick-active{
+          button::before {
+            color:#fff;
+          }
         }
       }
     }

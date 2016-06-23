@@ -1,6 +1,6 @@
-'use strict';
 export default class LandCtrl {
-    constructor() {
+    constructor(registration) {
+        "ngInject";
         this.responsCarousel = [
             {
               breakpoint: 768,

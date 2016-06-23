@@ -5,6 +5,6 @@ export default class HeaderCtrl {
     this.user = user;
     this.modal = modal; 
     this.state = $state;
-    this.registration = registration;
+    this.registrationHeader = registration;
   }
 }

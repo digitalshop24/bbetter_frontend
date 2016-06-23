@@ -46,7 +46,7 @@
     <ul class="right">
       <a ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</a>
       <!-- <a ng-show="$ctrl.user.authorized" ng-click="$ctrl.logout()" href="">Выйти</a> -->
-      <button class="grayBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registration()" type="button">Регистрация</button>
+      <button class="grayBtn" ng-show="!$ctrl.user.authorized" ng-click="ctrl.registrationHeader.registration()" type="button">Регистрация</button>
       <button class="grayBtn menuLoginBtn" ng-show="$ctrl.user.authorized" ><span ng-bind="$ctrl.user.name"></span></button>
       <div class="menuLogin text-center" >
         <div class="menuLoginWrap">

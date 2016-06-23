@@ -1,23 +1,6 @@
 <div>
-  <section class="notif" ng-show="ctrl.openBord">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="notifWrap" >
-            <h2>
-            <img src="img/notif.png" alt="" />
-            Не забыть сделать видео недельных соревнований и выслать до 23.59</h2>
-            <p ng-click="ctrl.openBord = !ctrl.openBord"><a href="">Закрыть</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="lineSec" id="fiveStep">
-    <h1>Тариф &laquo;Парный старт&raquo;</h1>
-  </section>
-
+  <bbetter-notification ng-show="ctrl.user.accountWasPaid"></bbetter-notification>
+  <bbetter-tariff-info tariffName="ctrl.user.active_tariff.name" ng-show="ctrl.user.accountWasPaid"></bbetter-tariff-info>
   <bbetter-personal-info summaries="ctrl.summaries"></bbetter-personal-info>
 
   <section class="contestSec" id="contestSec">
@@ -26,8 +9,8 @@
       </span>
   </section>
 
-  <bbetter-tariffs tariffs="ctrl.tariffs"></bbetter-tariffs>
-<!--    <section class="week_plan_drugs_eat text-center">
+  <bbetter-tariffs tariffs="ctrl.tariffs" ng-hide="ctrl.user.accountWasPaid"></bbetter-tariffs>
+  <section class="week_plan_drugs_eat text-center" ng-show="ctrl.user.accountWasPaid">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -147,7 +130,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <bbetter-calorie-calculator></bbetter-calorie-calculator>
   <section class="regimAndFoodSec">

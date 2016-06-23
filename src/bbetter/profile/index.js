@@ -2,8 +2,10 @@ import angular from 'angular';
 import controller from './controller';
 import template from './template';
 import calorieCalculator from './calorie-calculator';
+import notification from './notification';
 import contactTrainer from './contact-trainer';
 import personalInfo from './personal-info';
+import tariffInfo from './tariff-info';
 import tariffs from './tariffs';
 import videos from './videos';
 import style from './style';  //eslint-disable-line
@@ -11,7 +13,9 @@ import style from './style';  //eslint-disable-line
 export default angular.module('bbetter.profile', [
   calorieCalculator.name,
   contactTrainer.name,
+  notification.name,
   personalInfo.name,
+  tariffInfo.name,
   tariffs.name,
   videos.name
 ])

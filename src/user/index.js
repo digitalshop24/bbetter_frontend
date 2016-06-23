@@ -28,6 +28,26 @@ export default class User {
   }
 
   /* Gettes\setters to localStorage */
+  get id() {
+    return this._storage.user.id;
+  }
+
+  set id(value) {
+    this._storage.user.id = value;
+  }
+
+  get active_tariff() {
+    return this._storage.user.active_tariff;
+  }
+
+  set active_tariff(value) {
+    this._storage.user.active_tariff = value;
+  }
+
+  get accountWasPaid() {
+    return Boolean(this.active_tariff);
+  }
+
   get age() {
     return this._storage.user.age;
   }

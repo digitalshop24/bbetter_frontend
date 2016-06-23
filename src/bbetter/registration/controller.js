@@ -39,7 +39,6 @@ export default class RegistationCtrl {
 
   logout() {
     const {token: authToken} = this.user;
-
     return this.api.deleteV1UsersSignOut({authToken})
       .then(() => this.user.deauthorize())
       .then(() => this.state.go('bbetter.landing'))

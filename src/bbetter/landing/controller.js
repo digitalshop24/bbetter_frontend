@@ -1,5 +1,5 @@
 export default class LandCtrl {
-    constructor(registration) {
+    constructor() {
         "ngInject";
         this.responsCarousel = [
             {

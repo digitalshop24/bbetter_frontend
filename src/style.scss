@@ -1,20 +1,23 @@
-$gray:#555555;
-$fzNAV: 18px;
-$red:#d8003d;
+// стили общие на всё приложение
+// шрифты, кнопки, миксины и т.д.
+
 
 @font-face {
   font-family: Mir;
   src: url("fonts/Mir/Mir.otf");
   font-style: normal;
-  font-weight: normal;
+  font-weight: normal; 
+
 }
 @font-face {
   font-family: meta;
   src: url("fonts/meta/MetaPro-Bold.otf");
   font-style: normal;
-  font-weight: normal;
+  font-weight: normal; 
 }
-
+$gray:#555555;
+$fzNAV: 18px;
+$red:#d8003d;
 .slick-slide:focus, a,a:hover, a:focus {
   text-decoration: none;
   outline:none;
@@ -28,6 +31,7 @@ h1 {
 }
 ul {
   padding:0;
+  margin:0;
   li {
     list-style-type: none;
   }
@@ -62,29 +66,35 @@ nav {
     flex-direction:column;
     a {
       font-size: 18px;
-      color:$red;
+      // color:$red;
       margin-bottom: 5px;
     }
   }
 
+  
   #menuToggle {display: none;}
   .label-toggle {display: none;}
+  
 
   .wrapper {
     align-items: center;
     display: flex;
     justify-content: space-around;
   }
-
+.desctopLogo, .mobileLogo {
+  cursor: pointer;
+}
   @media screen and (max-width: 1000px) {
     .logo {
       img.mobileLogo {
         display: block;
         margin: 40px;
         max-width: 200px;
+
       }
       img.desctopLogo {
         display: none;
+        
       }
     }
     ul {
@@ -104,7 +114,9 @@ nav {
       }
     }
     ul.right {
-      height:0;
+
+      height:0; 
+
     }
     #menuToggle:checked ~ ul {
       opacity: 1;
@@ -136,7 +148,9 @@ nav {
   }
 }
 
-//// BUTTONS
+
+//// BUTTONS 
+
 
 .grayBtn {
   background-color:$gray;
@@ -154,47 +168,55 @@ nav {
   color: #fff;
   font-size:20px;
   transition:background-color .4s,color .4s;
-  &:disabled {
-    background-color: $gray;
-    border-color: $gray;
-  }
 }
-.redBtn:hover:enabled {
+.redBtn:hover {
   background-color: #fff;
   color: $red;
   border:2px solid $red;
 }
 
-
-///// FOOTER
-
 footer {
   background-color:#8b8b8b;
-  .logoFooter {
-    max-width: 300px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 10em;
+  .navWrap {
+    flex:1 0 auto;
   }
-  ul {
-    margin: 60px 0 0;
-    li {
-      display: inline-block;
-      font-size:$fzNAV;
-      margin-right: 20px;
-      a {
-        color: #000;
-        transition:color .4s;
-      }
-      a:hover,a:focus {
-        color: $red;
-      }
+  a {
+    color:#000;
+    text-align: left;
+    transition:color .4s;
+    &:hover,&:focus {
+      color:$red;
     }
   }
-  .left {
-    li {
-      margin-right: 60px;
+  .socialWrap {
+    display: flex;
+    align-items: center;
+    li:not(:last-child) {
+      margin-right: 15px;
     }
-  }
-  .right {
-    text-align: right;
-    margin-right: 60px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 0 20px 0 0;
+    .socialWrap {
+      margin: 20px auto;
+    }
+  }
+}
+
+input:focus, textarea:focus, select:focus, button:focus{
+  outline:none;
+}
+
+a:hover, a:focus, input {
+  outline: none;
+  text-decoration: none;
+}
+

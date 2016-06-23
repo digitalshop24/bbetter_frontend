@@ -1,4 +1,4 @@
-<div>
+<div class="modalSec">
   <div class="modal-content">
     <div class="modal-header">
       <button ng-click="ctrl.close()" type="button" class="close">&times;</button>
@@ -26,7 +26,7 @@
             <div class="col-md-6">
               <input ng-model="user.age" type="text" placeholder="Возраст" required/>
             </div>
-            <div ng-init="user.sex = 'female'" class="col-md-6 text-right">
+            <div ng-init="user.sex = 'female'" class="col-md-6 text-right checked_Male">
               <input ng-model="user.sex" type="radio" id="radioMale" class="hide-radio" value="male" />
               <label for="radioMale">M</label>
               <input ng-model="user.sex" type="radio" id="radioFemale" class="hide-radio" value="female" />

@@ -1,6 +1,9 @@
 // стили общие для landing & profile pages
 
 $red: #D8003D;
+a, button {
+  outline: none !important;
+}
 
 .btn_black {
   background-color: #000;
@@ -106,7 +109,27 @@ $red: #D8003D;
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .tariffSec {
+    .wrapper{
+      flex-wrap: wrap;
+      max-height: none;
+      .itWrap {
+        width:200px;
+        height: 270px;
+        margin: auto;
+        button{
+         margin: 0px auto 40px; 
+        }
+        .DrugsBtnWrap {
+          button {
+            top: -40px;
+          }
+        }
+      }
+    }
+  }
+}
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
@@ -120,6 +143,17 @@ $red: #D8003D;
     margin:60px auto 100px;
     max-width: 34em;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regimAndFoodSec{
+    padding:20px 0;
+    p {
+      margin:30px auto;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }
 
@@ -145,6 +179,18 @@ $red: #D8003D;
       }
     }
   }
+}
+@media screen and (max-width: 768px) {
+  .rulesSec {
+    padding: 30px 0;
+    .wrpapRul {
+      h1 {
+        margin:0;
+      }
+    }
+    
+  }
+
 }
 
 
@@ -236,4 +282,43 @@ $red: #D8003D;
       }
     }
   }
+}
+.menuLoginBtn {
+  position: relative;
+  z-index: 101;
+  width: 140px !important;
+  padding: 15px 0 !important;
+  text-align: center;
+}
+.menuLogin {
+  display: none;
+  position: absolute;
+  background-color: #555;
+  height: 195px;
+  width: 140px;
+  right: 29px;
+  z-index: 100;
+  padding-top: 40px;
+  margin-top: -30px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+
+  p {
+    padding-bottom: 5px;
+    a {
+      color: #fff ;
+      font-size: 15px !important;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #D8003D;
+    }
+  }
+  
+}
+.menuLogin:hover {
+  display: block;
+}
+.menuLoginBtn:hover + .menuLogin {
+  display: block;
 }

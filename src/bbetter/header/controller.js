@@ -12,7 +12,7 @@ export default class HeaderCtrl {
     "ngInject";
     this.api = api;
     this.user = user;
-
+ 
     this.modal = modal;
     this.state = $state;
   }

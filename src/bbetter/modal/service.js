@@ -15,7 +15,6 @@ export default class ModalService {
 
   open(extraOptions) {
     const options = Object.assign({}, defaultModalOptions, extraOptions);
-
     return this.modal.open(options);
   }
 }

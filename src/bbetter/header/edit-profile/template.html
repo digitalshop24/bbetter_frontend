@@ -1,4 +1,4 @@
-<div class="modal-content">
+<div class="modal-content modalSec">
   <div class="modal-header">
     <button ng-click="ctrl.close()" type="button" class="close">&times;</button>
     <img class="modalLogo" src="../img/infinityModal.png" alt="logo modal" />
@@ -25,7 +25,7 @@
           <div  ng-init="user.age = ctrl.user.age" class="col-md-6">
             <input ng-model="user.age" type="text" placeholder="Возраст" required/>
           </div>
-          <div ng-init="user.sex = ctrl.user.sex"class="col-md-6 text-right">
+          <div ng-init="user.sex = ctrl.user.sex"class="col-md-6 text-right checked_Male">
             <input ng-model="user.sex" type="radio" id="radioMale" class="hide-radio" value="male" />
             <label for="radioMale">M</label>
             <input ng-model="user.sex" type="radio" id="radioFemale" class="hide-radio" value="female" />
@@ -36,7 +36,7 @@
           <div class="row">
             <div class="col-md-12">
               <p class="redLabel">Заполните, пожалуйста, все поля!</p>
-              <button type="submit" name="submit" class="redBtn" ng-disabled="registrationForm.$pristine || registrationForm.$invalid">Сохранить</button>
+              <button style="margin-top: 30px;" type="submit" name="submit" class="redBtn" ng-disabled="registrationForm.$pristine || registrationForm.$invalid">Сохранить</button>
             </div>
           </div>
         </div>

@@ -1,11 +1,12 @@
 export default class LandCtrl {
-    constructor() {
+    constructor(registration) {
         "ngInject";
+        this.registrationPopup = registration;
         this.responsCarousel = [
-            {
+            { 
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: false, 
                 dots:true
               }
             }

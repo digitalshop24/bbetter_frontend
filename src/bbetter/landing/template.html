@@ -27,7 +27,7 @@
             <h2>Карьеристка</h2>
             <span>Когда карьера занимает все твои мысли и все твое время, трудно выделить в расписании время для спорта. Распространенная проблема!</span>
             <p>«Быть Лучше» - это для тебя! Ты экономишь время на поездках в зал Ты не тратишь часы на поиски подходящей системы питания. Ты делаешь себя лучше в своем личном ритме. Ты становишься все красивее - и за это получаешь призы и подарки! </p>
-            <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registration()" type="button">Начать!</button>
+            <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registrationLp.registration()" type="button">Начать!</button>
            <!--  <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</button> -->
             </li>
           </ul>
@@ -70,7 +70,7 @@
 
                  «Быть Лучше» - это для тебя!<br/> Ты экономишь время на поездках в зал<br/> Ты не тратишь часы на поиски подходящей системы питания.<br/> Ты делаешь себя лучше в своем личном ритме.<br/> Ты становишься все красивее - и за это получаешь призы и подарки!
 
-                  <button class="redBtn tarifBtn"  ng-show="!$ctrl.user.authorized">Начать!</button>
+                  <button class="redBtn tarifBtn"  ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registrationLp.registration()">Начать!</button>
                   </p>
                 </a>
               </div>
@@ -114,7 +114,7 @@
           </ul>
         </div>
   </section>
-
+<button ng-click="$ctrl.registrationPopup.login()"> weqrqwerqwer</button>
   <section class="lineSec" id="fiveStep">
     <h1>Буду лучше за 5 шагов!</h1>
   </section>

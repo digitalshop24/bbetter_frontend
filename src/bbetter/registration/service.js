@@ -7,7 +7,7 @@ import loginTemplate from './login/template';
 import EditProfileCtrl from './edit-profile/controller';
 import editProfileCtrlTemplate from './edit-profile/template';
 
-export default class RegistationCtrl {
+export default class AuthCtrl {
   constructor(api, user, modal, $state) {
     "ngInject";
     this.api = api;

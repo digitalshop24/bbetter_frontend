@@ -43,17 +43,15 @@
         </li>
       </a>
     </ul>
-    <ul class="right">
+   <ul class="right">
       <a ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registrationHeader.login()" href="">Войти</a>
-      <!-- <a ng-show="$ctrl.user.authorized" ng-click="$ctrl.logout()" href="">Выйти</a> -->
       <button class="grayBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registrationHeader.registration()" type="button">Регистрация</button>
-      <button class="grayBtn menuLoginBtn" ng-show="$ctrl.user.authorized" ><span ng-bind="$ctrl.user.name"></span></button>
+      <div class="grayBtn menuLoginBtn" tabindex="0" ng-show="$ctrl.user.authorized"><span ng-bind="$ctrl.user.name"></span></div>
       <div class="menuLogin text-center" >
         <div class="menuLoginWrap">
           <p><a class="" ui-sref="bbetter.profile">Кабинет</a></p>
-          <p><a class="" ng-click="$ctrl.registrationHeader.editProfile()"><span>Редактировать</span></a></p>
-          <p><a class="" ><span>Допинг</span></a></p>
-          <p><a class="" ng-click="$ctrl.registrationHeader.logout()"><span>Выйти</span></a></p>
+          <p><a class="" ng-click="$ctrl.registrationHeader.editProfile();"><span>Редактировать</span></a></p>
+          <p><a class="" ng-click="$ctrl.registrationHeader.logout();"><span>Выйти</span></a></p>
         </div>
       </div>
     </ul>

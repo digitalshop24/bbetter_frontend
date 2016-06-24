@@ -28,7 +28,7 @@
             <span>Когда карьера занимает все твои мысли и все твое время, трудно выделить в расписании время для спорта. Распространенная проблема!</span>
             <p>«Быть Лучше» - это для тебя! Ты экономишь время на поездках в зал Ты не тратишь часы на поиски подходящей системы питания. Ты делаешь себя лучше в своем личном ритме. Ты становишься все красивее - и за это получаешь призы и подарки! </p>
             <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.registration()" type="button">Начать!</button>
-            <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</button>
+           <!--  <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</button> -->
             </li>
           </ul>
         </div> 
@@ -474,30 +474,20 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Часто задаваемые вопросы</h1>
-          
-      
-          <div class="collapseParth"> <!-- Хочу поменять -->
-            <div >
-              <div class="panel" ng-repeat="data in ctrl.date_question" ng-init="show.$index = false">
-                <div>
-                  <h4>
-                    <a class="collapsed" href="" ng-click="show.$index = !show.$index">
-                      <span class="pl1" ng-show="show.$index"></span>
-                      <span class="pl2" ng-show="!show.$index"></span>
-                      {{data.question}}
-                    </a>
-                  </h4>
-                </div>
-                <div class=" answer" ng-show="show.$index">
-                    {{data.answer}}
-                </div>
-              </div>
+          <div class="col-md-12">
+            <div ng-repeat="data in ctrl.date_question" class="item">
+              <input id="ac-1{{$index + 1}}" name="accordion-1" type="radio" ng-checked="$index<1" />
+              <label for="ac-1{{$index + 1}}">{{data.question}}</label>
+              <article class="ac-small">
+                <p>{{data.answer}}</p>
+              </article>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="btnStartSec">
     <div class="container">
       <div class="row">
@@ -555,7 +545,7 @@
                   </div>
                 </div>
                 <div class="col-md-offset-3 col-md-6">
-                  <button class="redBtn">Отправить</button>
+                  <button class="redBtn" onclick="yaCounter38070020.reachGoal('otpravit'); return true;">Отправить</button>
                 </div>
               </div>
               

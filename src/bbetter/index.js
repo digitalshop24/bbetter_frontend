@@ -1,5 +1,6 @@
 import angular from 'angular';
 import modal from './modal';
+import registration from './registration';
 import header from './header';
 import footer from './footer';
 import landing from './landing';
@@ -10,6 +11,7 @@ import content from './template';
 
 export default angular.module('bbetter', [
   modal.name,
+  registration.name,
   header.name,
   landing.name,
   footer.name,

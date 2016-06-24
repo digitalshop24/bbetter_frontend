@@ -70,7 +70,6 @@ nav {
       margin-bottom: 5px;
     }
   }
-
   
   #menuToggle {display: none;}
   .label-toggle {display: none;}
@@ -202,6 +201,7 @@ footer {
   }
 }
 
+
 @media screen and (max-width: 900px) {
   footer {
     padding: 0 20px 0 0;
@@ -219,4 +219,5 @@ a:hover, a:focus, input {
   outline: none;
   text-decoration: none;
 }
+
 

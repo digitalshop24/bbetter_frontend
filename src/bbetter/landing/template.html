@@ -474,30 +474,20 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Часто задаваемые вопросы</h1>
-          
-      
-          <div class="collapseParth"> <!-- Хочу поменять -->
-            <div >
-              <div class="panel" ng-repeat="data in ctrl.date_question" ng-init="show.$index = false">
-                <div>
-                  <h4>
-                    <a class="collapsed" href="" ng-click="show.$index = !show.$index">
-                      <span class="pl1" ng-show="show.$index"></span>
-                      <span class="pl2" ng-show="!show.$index"></span>
-                      {{data.question}}
-                    </a>
-                  </h4>
-                </div>
-                <div class=" answer" ng-show="show.$index">
-                    {{data.answer}}
-                </div>
-              </div>
+          <div class="col-md-12">
+            <div ng-repeat="data in ctrl.date_question" class="item">
+              <input id="ac-1{{$index + 1}}" name="accordion-1" type="radio" ng-checked="$index<1" />
+              <label for="ac-1{{$index + 1}}">{{data.question}}</label>
+              <article class="ac-small">
+                <p>{{data.answer}}</p>
+              </article>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="btnStartSec">
     <div class="container">
       <div class="row">

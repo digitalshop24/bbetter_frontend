@@ -1,11 +1,11 @@
-import RegistartionCtrl from './registration/controller';
-import registartionTemplate from './registration/template';
+import RegistartionCtrl from '../registrationModal/registration/controller';
+import registartionTemplate from '../registrationModal/registration/template';
 
-import LoginCtrl from './login/controller';
-import loginTemplate from './login/template';
+import LoginCtrl from '../registrationModal/login/controller';
+import loginTemplate from '../registrationModal/login/template';
 
-import EditProfileCtrl from './edit-profile/controller';
-import editProfileCtrlTemplate from './edit-profile/template';
+import EditProfileCtrl from '../registrationModal/edit-profile/controller';
+import editProfileCtrlTemplate from '../registrationModal/edit-profile/template';
 
 export default class HeaderCtrl {
   constructor(api, user, modal, $state) {

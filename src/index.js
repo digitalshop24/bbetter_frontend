@@ -3,6 +3,7 @@ import api from './api';
 import bbetter from './bbetter';
 import style from './style';  //eslint-disable-line
 import User from './user';
+// import registrationModal './bbetter/registrationModal';
 
 /* global PRODUCTION */
 
@@ -20,6 +21,7 @@ const app = angular.module('app', [
 ]);
 
 app.service('user', User);
+// app.service('registrationModal', registrationModal)
 
 app.config($locationProvider => {
   "ngInject";

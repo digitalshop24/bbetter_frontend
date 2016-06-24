@@ -11,5 +11,5 @@ export default angular.module('bbetter.landing', [])
 	      controller: LandCtrl,
           controllerAs: 'ctrl',
 	      template
-	    });
-  });
+	    })
+});

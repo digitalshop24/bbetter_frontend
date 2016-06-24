@@ -1,5 +1,6 @@
 import angular from 'angular';
 import api from './api';
+import config from './../app/config';
 import bbetter from './bbetter';
 import style from './style';  //eslint-disable-line
 import User from './user';
@@ -18,6 +19,8 @@ const app = angular.module('app', [
   api.name,
   bbetter.name
 ]);
+
+app.constant('config', config);
 
 app.service('user', User);
 

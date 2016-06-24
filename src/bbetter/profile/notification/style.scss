@@ -1,0 +1,23 @@
+.notif {
+  background-color: #ffc017;
+  padding:50px 0;
+  color:#fff;
+  .notifWrap {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex:1 1 auto;
+ 	h2 {
+		font-size: 24px;
+		align-items: center;
+		margin: auto;
+		img {
+			margin-right: 30px;
+		}
+	 }
+   a {
+    color: #fff;
+   }
+
+  }
+}

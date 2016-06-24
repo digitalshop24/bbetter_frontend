@@ -1,17 +1,29 @@
 export default class PersonalInfoCtrl {
-  constructor(api, user, $state) {
+  constructor(api, user, $q) {
     "ngInject";
     this.api = api;
     this.user = user;
-    this.state = $state;
+    this.promise = $q;
     this.summaries = this.summaries.length ? this.summaries : [{}];
   }
 
+  get canMore() {
+    const {active_tariff} = this.user;
+
+    const {people_number = 0} = active_tariff || {};
+
+    return this.summaries.length < people_number;
+  }
+
   addMore() {
-    this.summaries = [{}, ...this.summaries];
+    if (this.canMore) {
+      this.summaries.push({});
+    }
   }
 
   save(summaries) {
+    this.disabled = true;
+
     const promises = [];
 
     summaries.forEach(summary => {
@@ -25,15 +37,16 @@ export default class PersonalInfoCtrl {
       promises.push(promise);
     });
 
-    return Promise.all(promises)
-      .then(() => this.state.go('.', {}, {reload: true}));
+    return this.promise.all(promises)
+      .then(() => {
+        this.saved = true;
+      });
   }
 
   createSummary(summary) {
     const {token: authToken} = this.user;
 
     return this.api.postV1Summaries({authToken, ...summary})
-      .then(response => console.info(response))
       .catch(response => console.error(response));
   }
 
@@ -56,8 +69,7 @@ export default class PersonalInfoCtrl {
       motivation: updatedM,
       ...rest
     })
-      .then(response => console.info(response))
-      .catch(response => console.error(response));
+    .catch(response => console.error(response));
   }
 }
 

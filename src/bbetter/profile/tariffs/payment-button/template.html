@@ -1,0 +1,8 @@
+<form action="{{$ctrl.payment.url | trustedUrl}}" method="post">
+    <input name="shopId" ng-value="$ctrl.payment.shopId" type="hidden"/>
+    <input name="scid" ng-value="$ctrl.payment.scid" type="hidden"/>
+    <input name="sum" ng-value="$ctrl.tariff.price" type="hidden">
+    <input name="customerNumber" ng-value="$ctrl.user.id" type="hidden"/>
+    <input name="tariffId" ng-value="$ctrl.tariff.id" type="hidden"/>
+    <button ng-class="$ctrl.buttonClass" type="submit" ng-bind="::$ctrl.title"></button>
+</form>

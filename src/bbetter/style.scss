@@ -21,115 +21,6 @@ a, button {
   border:2px solid #000;
 }
 
-.lineSec {
-  text-align: center;
-  background-position: center center;
-  background-color:$red;
-   background-image: url('img/lineSec/lineBg.png');
-  background-size: 100%;
-  height: 60px;
-  h1 {
-    color: #fff;
-    line-height: 60px;
-    margin:0;
-  }
-}
-
-/////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-
-.tariffSec {
-  text-align: center;
-  padding:50px 0 10px;
-  background-image: url('img/tariffSec/tariffBg.png');
-  background-size: cover;
-  background-position: center;
-  color:#fff;
-  border-bottom: 4px solid $red;
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-height: 290px;
-    .itWrap {
-      width: 300px;
-      height:320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h2 {
-        color: $red;
-      }
-      p {
-        color: #fff;
-      }
-      span {
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing:2px;
-        color:#fff;
-        display: block;
-        i {
-          font-weight: 800;
-        }
-      }
-      button {
-        max-width: 150px;
-        margin:0 auto;
-        height: 45px;
-        padding:0 25px;
-        margin-top: 40px;
-      }
-      button.DrugsBtn {
-        border:4px solid $red;
-        width: 80px;
-        height: 80px;
-        background-image:url('img/tariffSec/drugs.png');
-        background-size: cover;
-        background-position: center;
-        border-radius:50%;
-      }
-      .DrugsBtnWrap {
-        position: relative;
-        button {
-          position: absolute;
-          top:-60px;
-          right:0;
-          left:0;
-          bottom:0;
-        }
-        height: 45px;
-      }
-    }
-    .itWrap:nth-last-child(1){
-      p {
-        max-height: 0px;
-        margin: -30px 0px 30px;
-        line-height: 16px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  .tariffSec {
-    .wrapper{
-      flex-wrap: wrap;
-      max-height: none;
-      .itWrap {
-        width:200px;
-        height: 270px;
-        margin: auto;
-        button{
-         margin: 0px auto 40px; 
-        }
-        .DrugsBtnWrap {
-          button {
-            top: -40px;
-          }
-        }
-      }
-    }
-  }
-}
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
@@ -188,7 +79,7 @@ a, button {
         margin:0;
       }
     }
-    
+
   }
 
 }
@@ -235,7 +126,7 @@ a, button {
           text-indent: 20px;
           margin-left: -60px;
         }
-           
+
         .hide-radio:checked + label {
           display: inline-block;
           background-color:$red;
@@ -314,7 +205,7 @@ a, button {
       color: #D8003D;
     }
   }
-  
+
 }
 .menuLogin:hover {
   display: block;

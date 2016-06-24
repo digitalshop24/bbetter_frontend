@@ -1,71 +1,16 @@
 <div>
-  <section class="notif" ng-show="ctrl.openBord">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="notifWrap" >
-            <h2>
-            <img src="img/notif.png" alt="" />
-            Не забыть сделать видео недельных соревнований и выслать до 23.59</h2>
-            <p ng-click="ctrl.openBord = !ctrl.openBord"><a href="">Закрыть</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="lineSec" id="fiveStep">
-    <h1>Тариф &laquo;Парный старт&raquo;</h1>
-  </section>
-  
+  <bbetter-notification ng-show="ctrl.user.accountWasPaid"></bbetter-notification>
+  <bbetter-tariff-info tariff="ctrl.user.active_tariff" ng-show="ctrl.user.accountWasPaid"></bbetter-tariff-info>
   <bbetter-personal-info summaries="ctrl.summaries"></bbetter-personal-info>
-  
+
   <section class="contestSec" id="contestSec">
     <span class="infinity">
         <img src="../img/infinity.png" />
       </span>
   </section>
 
-  <section class="tariffSec" id="tariffSec">
-    <div class="container">
-      <div class="row">
-        <h1>Что берем?</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-            <div class="wrapper">
-              <div class="itWrap">
-                <h2>Онлайн-<br/>тренировка</h2>
-                <p>Начать онлайн тренировки в любое время без участия в соревновании</p>
-                <span>2 000 <i class="fa fa-rub"></i></span>
-                <button class="redBtn">Начать!</button>
-              </div>
-              <div class="itWrap">
-                <h2>Спортсмен<br/> одиночка</h2>
-                <p>1 человек</p>
-                <span>2 000 <i class="fa fa-rub"></i></span>
-                <button class="redBtn">Это я!</button>
-              </div>
-              <div class="itWrap">
-                <h2>Парный<br/> старт</h2>
-                <p>2 человека</p>
-                <span>3 000 <i class="fa fa-rub"></i></span>
-                <button class="redBtn">Это мы!</button>
-              </div>
-              <!-- <div class="itWrap">
-                <h2>Допинг</h2>
-                <p>Доспупен каждую неделю за исключением финала. Дает возможность проходить в следующий уровень без недельного соревнования</p>
-                <span>1 000 <i class="fa fa-rub"></i></span>
-                <div class="DrugsBtnWrap">
-                  <button class="DrugsBtn"></button>
-                </div>
-              </div> -->
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!--    <section class="week_plan_drugs_eat text-center">
+  <bbetter-tariffs tariffs="ctrl.tariffs" ng-hide="ctrl.user.accountWasPaid"></bbetter-tariffs>
+  <section class="week_plan_drugs_eat text-center" ng-show="ctrl.user.accountWasPaid">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -185,8 +130,8 @@
         </div>
       </div>
     </div>
-  </section> -->
- 
+  </section>
+
   <bbetter-calorie-calculator></bbetter-calorie-calculator>
   <section class="regimAndFoodSec">
     <div class="container">

@@ -7,11 +7,11 @@
           <!-- <div class="eTimer"></div> -->
           <div>
             <div class="TitleTimer"><h5>Старт сезона 04.07.16</h5></div>
-            <ul class="Timer">                   
-              <li><p style="position: relative; left: -7px;">дни</p><h5><timer end-time="1467590400000">{{days}}</timer><span class="two_dots">:</span> </h5> </li>                
-              <li><p style="position: relative; left: -7px;">часы</p><h5><timer end-time="1467590400000">{{hhours}}</timer><span class="two_dots">:</span></h5> </li>             
+            <ul class="Timer">
+              <li><p style="position: relative; left: -7px;">дни</p><h5><timer end-time="1467590400000">{{days}}</timer><span class="two_dots">:</span> </h5> </li>
+              <li><p style="position: relative; left: -7px;">часы</p><h5><timer end-time="1467590400000">{{hhours}}</timer><span class="two_dots">:</span></h5> </li>
               <li><p>минуты</p><h5><timer end-time="1467590400000">{{mminutes}}</timer></h5> </li>
-            </ul>  
+            </ul>
 
           </div>
 
@@ -31,8 +31,8 @@
             <button class="redBtn tarifBtn" ng-show="!$ctrl.user.authorized" ng-click="$ctrl.login()" href="">Войти</button>
             </li>
           </ul>
-        </div> 
-        <div class="t2">   
+        </div>
+        <div class="t2">
             <ul class="item">
               <li class="bg2">
                 <h2>Беззаботная</h2>
@@ -41,8 +41,8 @@
                 <button class="redBtn tarifBtn">Начать!</button>
               </li>
             </ul>
-        </div> 
-        <div class="t3">   
+        </div>
+        <div class="t3">
             <ul class="item">
               <li class="bg3">
                 <h2>Домохозяйка</h2>
@@ -51,7 +51,7 @@
                 <button class="redBtn tarifBtn">Начать!</button>
               </li>
             </ul>
-        </div>    
+        </div>
       </slick>
     <div class="accordion hidden-xs">
           <ul>
@@ -86,7 +86,7 @@
                     </span>
                   </h2>
                   <p>
-                  <span>Жизнь – это большой праздник! Зачем забивать себе голову лишними проблемами, когда уже есть готовое решение?!</span><br/>                      
+                  <span>Жизнь – это большой праздник! Зачем забивать себе голову лишними проблемами, когда уже есть готовое решение?!</span><br/>
                   Ты экономишь на абонементе в спортзал и покупаешь новое платье.<br/>Ты не мучаешься, составляя себе план тренировок и питания.<br/>Ты всегда можешь рассчитывать на советы личного тренера и диетолога.<br/>Ты становишься все красивее - и за это получаешь призы и подарки!
                   <button class="redBtn tarifBtn">Начать!</button>
                   </p>
@@ -104,7 +104,7 @@
                   </h2>
                   <p>
 
-                  <span>Быть хранительницей очага – трудная работа. Иногда тебе кажется, что в сутках не больше 10 часов! Как найти время на себя?</span><br/> 
+                  <span>Быть хранительницей очага – трудная работа. Иногда тебе кажется, что в сутках не больше 10 часов! Как найти время на себя?</span><br/>
                   «Быть Лучше» - это для тебя!<br/> Ты занимаешься спортом не выходя из дома.<br/> Ты получаешь простую схему питания и не тратишь много времени на готовку.<br/> Ты можешь тренироваться в любое свободное время. <br/> Ты становишься все красивее - и за это получаешь призы и подарки!
                   <button class="redBtn tarifBtn">Начать!</button>
                   </p>
@@ -187,7 +187,7 @@
           </div>
         </div>
         <div class="row">
-          
+
           <div class="col-md-7 rightSide">
             <ul class=" text-center">
               <li>
@@ -216,8 +216,8 @@
               </li>
             </ul>
             <h3 ><i>А также промежуточные призы и подарки трем лидерам каждую неделю!</i></h3>
-          </div> 
-          <div class="col-md-5 leftSide hidden-xs">           
+          </div>
+          <div class="col-md-5 leftSide hidden-xs">
             <p>Тренировки намного <br/> эффективнее, когда <br/>  твоя цель – победа!</p>
             <p>Это соревнование за красоту, в котором должна победить именно ты, а твоим орудием станет идеально сбалансированная фитнес программа.</p>
             <p>После регистрации ты получишь программу питания и комплекс упражнений. Только точное соблюдение наших инструкций поможет тебе получить то прекрасное отражение в зеркале, которые ты по-настоящему заслуживаешь, а дополнительным стимулом для тебя станут крутые  призы и промежуточные подарки каждую неделю!</p>
@@ -228,12 +228,12 @@
       </div>
     </section>
 
-  <section class="tariffSec" id="tariffSec">
+  <section class="tariffSec" id="tariffSec" ng-hide="ctrl.user.accountWasPaid">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
               <div class="wrapper">
-                
+
                 <div class="itWrap">
                   <h2>Спортсмен<br/> одиночка</h2>
                   <p>1 человек</p>
@@ -303,13 +303,13 @@
             <li class="bg1"></li>
             <li class="bg2"></li>
           </ul>
-        </div> 
-        <div>   
+        </div>
+        <div>
             <ul class="item">
               <li class="bg3"></li>
               <li class="bg4"></li>
             </ul>
-        </div>    
+        </div>
       </slick>
     </div>
   </section>
@@ -429,7 +429,7 @@
               </li>
               <li>Автор программы питания</li>
 
-              <li> 
+              <li>
 
                 <p> Эта программа питания разработана специально под комплекс упражнений фитнес-программы для похудения. Сочетая программу тренировок, эту систему питания и, конечно же, свою целеустремленность, вы достигнете результатов без голодовок и вреда для здоровья. А главное - эффект будет намного дольше и стабильнее, чем после жестких и вредных диет. Питайтесь правильно!</p>
               </li>
@@ -474,8 +474,8 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Часто задаваемые вопросы</h1>
-          
-      
+
+
           <div class="collapseParth"> <!-- Хочу поменять -->
             <div >
               <div class="panel" ng-repeat="data in ctrl.date_question" ng-init="show.$index = false">
@@ -558,7 +558,7 @@
                   <button class="redBtn">Отправить</button>
                 </div>
               </div>
-              
+
             </form>
             </div>
             <div class="thankU">
@@ -572,7 +572,7 @@
 
 
 
-  
+
   <!-- MODAL SECTION -->
   <section class="modalSec">
     <iframe name="hidden_iframe" id="hidden_iframe" class="hidden"></iframe>
@@ -637,7 +637,7 @@
     </div>
 
 
-    
+
 
 
     <div class="modal fade" id="connectModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">

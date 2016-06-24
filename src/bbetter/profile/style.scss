@@ -26,31 +26,6 @@ h2,p {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
-.notif {
-  background-color: #ffc017;
-  padding:50px 0;
-  color:#fff;
-  .notifWrap {
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  flex:1 1 auto;
- 	h2 {
-		font-size: $h2;
-		align-items: center;
-		margin: auto;
-		img {
-			margin-right: 30px;
-		}
-	 }
-   a {
-    color: #fff;
-   }
-
-  }
-}
-
-
 .week_plan_drugs_eat {
   background-color: #e8698d;
   background-image: url("img/weekPlan/bgPlan.png");
@@ -164,7 +139,7 @@ h2,p {
     // min-height: 130px;
     background-color: #fff;
     .btn_black {
-      margin: 20px 0; 
+      margin: 20px 0;
     }
   }
 
@@ -198,4 +173,3 @@ h2,p {
 //     margin-bottom: 50px;
 //   }
 // }
-

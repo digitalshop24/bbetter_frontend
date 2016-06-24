@@ -24,6 +24,15 @@ export default angular.module('bbetter.profile', [
     $stateProvider.state('bbetter.profile', {
       controller,
       controllerAs: 'ctrl',
+      onEnter: (api, user) => {
+        const {token: authToken} = user;
+
+        return api.getV1UsersCurrent({authToken})
+          .then(updatedUser => {
+            Object.assign(user, updatedUser);
+          })
+          .catch(response => console.error(response));
+      },
       resolve: {
         summaries: (api, user) => {
           "ngInject";

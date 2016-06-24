@@ -88,6 +88,14 @@ export default class User {
     this._storage.user.name = value;
   }
 
+  get promocode() {
+    return this._storage.user.promocode;
+  }
+
+  set promocode(value) {
+    this._storage.user.promocode = value;
+  }
+
   get sex() {
     return this._storage.user.sex;
   }

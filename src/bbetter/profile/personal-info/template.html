@@ -59,7 +59,7 @@
           <div class="footer_user_data">
             <div class="col-md-12 text-center">
               <p class="pink" ng-hide="$ctrl.user.accountWasPaid">Загрузка фотографий станет доступной после оплаты тарифа</p>
-              <button class="redBtn" type="submit">Сохранить изменения</button>
+              <button class="redBtn" type="submit" ng-disabled="$ctrl.disabled">Сохранить изменения</button>
             </div>
             <div class="col-md-12 text-center footer_user_data" ng-show="$ctrl.canMore">
               <button class="redBtn" ng-click="$ctrl.addMore()" type="button">Еще</button>

@@ -22,6 +22,8 @@ export default class PersonalInfoCtrl {
   }
 
   save(summaries) {
+    this.disabled = true;
+
     const promises = [];
 
     summaries.forEach(summary => {

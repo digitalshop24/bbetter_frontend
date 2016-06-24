@@ -6,6 +6,7 @@ import landing from './landing';
 import profile from './profile';
 import style from './style';
 import content from './template';
+import registration from './registration';
 
 
 export default angular.module('bbetter', [
@@ -14,6 +15,7 @@ export default angular.module('bbetter', [
   landing.name,
   footer.name,
   profile.name,
+  registration.name
 ])
 .config($stateProvider => {
   "ngInject";

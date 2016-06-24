@@ -1,11 +1,13 @@
-'use strict';
 export default class LandCtrl {
-    constructor() {
+    constructor(user, registration) {
+        "ngInject";
+        this.registrationPopup = registration;
+        this.user = user;
         this.responsCarousel = [
-            {
+            { 
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: false, 
                 dots:true
               }
             }

@@ -1,1 +1,1 @@
-npm run build & npm run dev-server
+npm run dev-server

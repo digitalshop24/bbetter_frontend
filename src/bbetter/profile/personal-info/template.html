@@ -1,5 +1,5 @@
 <div class="user_data">
-  <div class="container">
+  <div class="container" ng-hide="$ctrl.saved">
     <div class="row">
       <!-- <div class="col-md-12 text-center user_data_titel">
         <h2>Дина Богачева</h2>
@@ -8,9 +8,9 @@
         <button class="redBtn" type="button">Пригласить</button>
       </div> -->
       <div class="col-md-12 text-left form">
-        <form name="summariesForm" ng-submit="$ctrl.save($ctrl.summaries)">
-          <div ng-repeat="summary in $ctrl.summaries | orderBy:'-'" class="summary">
-            <input type="text" placeholder="Мотивирующие слова" ng-model="summary.motivation_words" class="motivation_word" required />
+        <form ng-submit="$ctrl.save($ctrl.summaries)">
+          <div ng-repeat="summary in $ctrl.summaries" class="summary">
+            <input type="text" placeholder="Мотивирующие слова" ng-model="summary.motivation_words" class="motivation_word"/>
             <div class="row">
 
               <div class="col-sm-12 col-md-9">
@@ -18,7 +18,7 @@
                 <div ng-show="summary.before" class="preview preview_left">
                   <img ng-src="{{summary.before}}">
                 </div>
-                <file-upload-button ng-hide="summary.after" file-url="summary.after" label="Загрузить &laquo;После&raquo;" class="btn_center" disabled="!$ctrl.user.accountWasPaid"></file-upload-button>
+                <file-upload-button ng-hide="summary.after" file-url="summary.after" label="Загрузить &laquo;После&raquo;" class="btn_center" disabled="true"></file-upload-button>
                 <div ng-show="summary.after" class="preview preview_center">
                   <img ng-src="{{summary.after}}">
                 </div>
@@ -33,24 +33,24 @@
                   <br> в расслабленном состоянии и минимуме одежды.</p>
                 <ul>
                   <li>
-                    <input type="text" ng-model="summary.weight" placeholder="Вес" required>
+                    <input type="text" ng-model="summary.weight" placeholder="Вес">
                   </li>
                   <li>
-                    <input type="text" ng-model="summary.height" placeholder="Рост" required>
+                    <input type="text" ng-model="summary.height" placeholder="Рост">
                   </li>
                   <li>
-                  <input type="text" ng-model="summary.age" placeholder="Возраст" required>
+                  <input type="text" ng-model="summary.age" placeholder="Возраст">
                     </li>
                 </ul>
                 <ul style="margin-left: 20px;">
                   <li>
-                    <input type="text" ng-model="summary.chest" placeholder="Грудь" required>
+                    <input type="text" ng-model="summary.chest" placeholder="Грудь">
                   </li>
                   <li>
-                    <input type="text" ng-model="summary.waist" placeholder="Талия" required>
+                    <input type="text" ng-model="summary.waist" placeholder="Талия">
                   </li>
                   <li>
-                  <input type="text" ng-model="summary.thigh" placeholder="Бедра" required>
+                  <input type="text" ng-model="summary.thigh" placeholder="Бедра">
                   </li>
                 </ul>
               </div>
@@ -59,14 +59,19 @@
           <div class="footer_user_data">
             <div class="col-md-12 text-center">
               <p class="pink" ng-hide="$ctrl.user.accountWasPaid">Загрузка фотографий станет доступной после оплаты тарифа</p>
-              <button class="redBtn" type="submit" ng-disabled="summariesForm.$pristine ||summariesForm.$invalid">Сохранить изменения</button>
+              <button class="redBtn" type="submit">Сохранить изменения</button>
             </div>
-            <div class="col-md-12 text-center footer_user_data">
+            <div class="col-md-12 text-center footer_user_data" ng-show="$ctrl.canMore">
               <button class="redBtn" ng-click="$ctrl.addMore()" type="button">Еще</button>
             </div>
           </div>
         </form>
       </div>
+    </div>
+  </div>
+  <div class="container success" ng-show="$ctrl.saved">
+    <div class="center-align">
+      <h1>Ваши данные успешно сохранены</h1>
     </div>
   </div>
 </div>

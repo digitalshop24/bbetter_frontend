@@ -54,7 +54,7 @@ $red:#d8003d;
       background-repeat: no-repeat;
       max-height: 460px;
       .item {
-        padding:50px;
+        padding:50px 30px;
         
       }
       h2 {
@@ -91,6 +91,14 @@ $red:#d8003d;
       background-image: url("img/accordeon/3.png");
       .item {
         background-color: rgba(0,0,0,.5);
+      }
+    }
+    .slick-dots {
+      bottom:0;
+      li.slick-active{
+        button::before {
+          color:#fff;
+        }
       }
     }
   }
@@ -471,6 +479,26 @@ $red:#d8003d;
     }
   }
  }
+
+@media screen and (min-width: 768px) and (max-width: 1350px) { 
+  .contestSec {
+    .wrapperContest {
+      h1{
+        max-width: 340px;
+        margin: 0 auto 30px
+      }
+    }
+    .rightSide {
+      ul {
+        li:nth-child(1){
+          background-size: 73%;
+          margin-left:210px;
+        }
+      }
+    }
+  }
+}
+
 
 
 ////////////////////////////////////////////////////////////////////
@@ -880,6 +908,14 @@ $red:#d8003d;
           margin: 0;
         }
       }
+      .slick-dots {
+        bottom:-25px;
+        li.slick-active{
+          button::before {
+            color:#fff;
+          }
+        }
+      }
     }
   }
 }
@@ -895,64 +931,60 @@ $red:#d8003d;
     margin:0 auto 80px;
     text-align: center;
   }
-  .panel {
-    margin:0 0 20px;
-    background-color: transparent;
-    border:none;
-    box-shadow:none;
-    h4 {
-      a,a:hover {
-        display: block;
-        color: #000;
-        font-weight:800;
-        font-size: 26px;
-        span {
-          display: inline-block;
-          height:40px;
-          width: 40px;
-          margin-right: 25px;
-          border-radius: 50%;
-          font-size: 45px;
-          font-weight: 800;
-          vertical-align: middle;
-          line-height: 36px;
-          text-align: center;
-        }
-        .pl1 {
-          border:2px solid $red;
-          background-color:$red;
-          color:#fff;
-        }
-        .pl2 {
-          background-color: transparent;
-          border:2px solid;
-          color: $red;
-        }
-        .pl1:before {
-          content:"-";
-        }
-        .pl2:before {
-          content:"+";
-        }
-      }
-      a.collapsed {
-        span {
-          background-color: transparent;
-          border:2px solid;
-          color: $red;
-        }
-        span:before {
-          content:"+";
-        }
+  .item {
+    input{
+      display: none;
+    }
+    label {
+      color: #000;
+      font-weight:800;
+      font-size: 26px;
+      cursor: pointer;
+      &:before {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;
+        display: inline-block;
+        content:"+";
+        height:40px;
+        width: 40px;
+        margin-right: 25px;
+        border-radius: 50%;
+        font-size: 45px;
+        font-weight: 800;
+        border:2px solid $red;
+        background-color:$red;
+        color:#fff;
+        transition:background-color .4s, color .4s;
       }
     }
-    .answer {
-      max-width: 53em;
-      font-size: 17px;
-      margin-left:70px;
+    input:checked + label {
+      &:before {
+        background-color: transparent;
+        border:2px solid;
+        color: $red;
+        content:"-";
+      }
     }
-  } 
-
+    input:checked ~ article {
+      p {
+        display:block;
+        opacity:1;
+      }
+    }
+    article {
+      p {
+        opacity:0;
+        font-size: 18px;
+        margin-left: 65px;
+        transition:opacity .4s;
+        display: none;
+      }
+    }
+  }
+  .item:not(:last-child) {
+    margin-bottom:20px;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////

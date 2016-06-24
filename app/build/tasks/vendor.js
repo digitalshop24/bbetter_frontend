@@ -9,7 +9,6 @@ export default gulp.task('vendor', ['vendor:scripts', 'vendor:styles', 'vendor:f
 
 gulp.task('vendor:scripts', () => {
   const swaggerSource = generateSwaggerApi();
-  console.log(swaggerSource);
   const uglifiedSource = uglify.minify(swaggerSource, {fromString: true}).code;
 
   return gulp.src(config.scripts)

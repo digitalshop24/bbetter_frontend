@@ -1,4 +1,18 @@
 <div>
+<section class="notif" ng-show="ctrl.openBord">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notifWrap" >
+            <h2>
+            <img src="img/notif.png" alt="" />
+            Оплата тарифов будет доступна в среду, мы обязательно уведомим Вас заранее.</h2>
+            <p ng-click="ctrl.openBord = !ctrl.openBord"><a href="">Закрыть</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 <section class="timmerSec">
     <div class="container">
       <div class="row">
@@ -8,9 +22,9 @@
           <div>
             <div class="TitleTimer"><h5>Старт сезона 04.07.16</h5></div>
             <ul class="Timer">                   
-              <li><p style="position: relative; left: -7px;">дни</p><h5><timer end-time="1467590400000">{{days}}</timer><span class="two_dots">:</span> </h5> </li>                
-              <li><p style="position: relative; left: -7px;">часы</p><h5><timer end-time="1467590400000">{{hhours}}</timer><span class="two_dots">:</span></h5> </li>             
-              <li><p>минуты</p><h5><timer end-time="1467590400000">{{mminutes}}</timer></h5> </li>
+              <li><p style="position: relative; left: -7px;">дни</p><h5><timer end-time="1467936000000">{{days}}</timer><span class="two_dots">:</span> </h5> </li>                
+              <li><p style="position: relative; left: -7px;">часы</p><h5><timer end-time="1467936000000">{{hhours}}</timer><span class="two_dots">:</span></h5> </li>             
+              <li><p>минуты</p><h5><timer end-time="1467936000000">{{mminutes}}</timer></h5> </li>
             </ul>  
 
           </div>
@@ -237,19 +251,19 @@
                   <h2>Спортсмен<br/> одиночка</h2>
                   <p>1 человек</p>
                   <span>2 000 <i class="fa fa-rub"></i></span>
-                  <button class="redBtn">Это я!</button>
+                  <button class="redBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Это я!</button>
                 </div>
                 <div class="itWrap">
                   <h2>Парный<br/> старт</h2>
                   <p>2 человека</p>
                   <span>3 000 <i class="fa fa-rub"></i></span>
-                  <button class="redBtn">Это мы!</button>
+                  <button class="redBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Это мы!</button>
                 </div>
                 <div class="itWrap">
                   <h2>Командный <br/>зачет</h2>
                   <p>5 человек</p>
                   <span>5 000 <i class="fa fa-rub"></i></span>
-                  <button class="redBtn">Начать!</button>
+                  <button class="redBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Начать!</button>
                 </div>
                 <!-- <div class="itWrap">
                   <h2>Допинг</h2>
@@ -491,7 +505,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <button class="redBtn">Стартую!</button>
+          <button class="redBtn" ng-show="!ctrl.user.authorized" ng-click="ctrl.registrationPopup.registration()">Стартую!</button>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ export default class LandCtrl {
         "ngInject";
         this.registrationPopup = registration;
         this.user = user;
+        this.openBord = true;
         this.responsCarousel = [
             { 
               breakpoint: 768,

@@ -22,6 +22,11 @@
           </div>
         </div>
         <div class="row">
+          <div ng-init="user.promocode = ctrl.user.promocode" class="col-md-12">
+            <input ng-model="user.promocode" ng-disabled="ctrl.user.promocode" type="text" placeholder="Промокод"/>
+          </div>
+        </div>
+        <div class="row">
           <div  ng-init="user.age = ctrl.user.age" class="col-md-6">
             <input ng-model="user.age" type="text" placeholder="Возраст" required/>
           </div>
@@ -31,6 +36,9 @@
             <input ng-model="user.sex" type="radio" id="radioFemale" class="hide-radio" value="female" />
             <label for="radioFemale">Ж</label>
           </div>
+        </div>
+        <div class="bg-danger" ng-show="error">
+          {{error}}
         </div>
         <div class="modal-footer">
           <div class="row">

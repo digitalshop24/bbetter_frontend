@@ -8,6 +8,7 @@ export default class RegistartionCtrl {
   }
 
   login(credentials) {
+    credentials.error = null;
     return this.api.postV1UsersSignIn(credentials)
       .then(response => {
         const {auth_token: token, ...profile} = response;
@@ -16,7 +17,10 @@ export default class RegistartionCtrl {
       })
       .then(() => this.instance.close())
       .then(() => this.state.go('bbetter.profile'))
-      .catch(response => console.error(response));
+      .catch(response => {
+        console.error(response);
+        credentials.error = response.body.message;
+      });
   }
 
   close() {

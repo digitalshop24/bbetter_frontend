@@ -4,29 +4,32 @@
     <img class="modalLogo" src="../img/infinityModal.png" alt="logo modal" />
   </div>
   <div class="modal-body">
-    <div class="formWrapper">
-      <form name="registrationForm" ng-submit="ctrl.login(credentials)">
+    <div class="formWrapper" ng-show="!success">
+      <form name="registrationForm" ng-submit="ctrl.resetPassword(credentials)">
         <div class="row">
           <div class="col-md-12">
             <input ng-model="credentials.email" type="email" placeholder="Электронная почта" required/>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <input ng-model="credentials.password" type="password" placeholder="Пароль" required/>
-          </div>
+
+        <div class="bg-danger" ng-show="error">
+          {{error}}
         </div>
+
         <div class="modal-footer">
           <div class="row">
             <div class="col-md-12">
-              <button type="submit" name="submit" class="redBtn" ng-disabled="registrationForm.$invalid">Войти</button>
-              <button type="button" ng-click="ctrl.resetPassword()" class="redBtn">Восстановить пароль</button>
+              <button type="submit" name="submit" class="redBtn" ng-disabled="registrationForm.$invalid">Восстановить</button>
             </div>
           </div>
         </div>
       </form>
     </div>
     <!--  formWrapper -->
+
+    <div class="bg-success" ng-show="success">
+      Ваш пароль отправлен на указанный адрес.
+    </div>
   </div>
   <!-- modal-body -->
 </div>

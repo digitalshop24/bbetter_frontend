@@ -1,10 +1,14 @@
+import ResetPasswordCtrl from '../password-reset/controller';
+import resetPasswordTemplate from '../password-reset/template';
+
 export default class RegistartionCtrl {
-  constructor(api, user, $state, $uibModalInstance) {
+  constructor(api, user, $state, $uibModalInstance, modal) {
     "ngInject";
     this.api = api;
     this.user = user;
     this.state = $state;
     this.instance = $uibModalInstance;
+    this.modal = modal;
   }
 
   login(credentials) {
@@ -17,6 +21,14 @@ export default class RegistartionCtrl {
       .then(() => this.instance.close())
       .then(() => this.state.go('bbetter.profile'))
       .catch(response => console.error(response));
+  }
+
+  resetPassword() {
+    this.instance.close();
+    return this.modal.open({
+      controller: ResetPasswordCtrl,
+      template: resetPasswordTemplate
+    });
   }
 
   close() {

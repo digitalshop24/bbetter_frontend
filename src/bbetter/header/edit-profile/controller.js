@@ -9,6 +9,8 @@ export default class RegistartionCtrl {
   }
 
   edit(user) {
+    if ( this.user.promocode ) delete user.promocode;
+
     this.scope.error = null;
     const {token: authToken} = this.user;
 

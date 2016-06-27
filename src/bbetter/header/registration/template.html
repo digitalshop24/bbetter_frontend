@@ -38,6 +38,13 @@
               <label for="radioFemale">Ж</label>
             </div>
           </div>
+
+          <div class="row" ng-show="reg_error">
+            <div class="col-md-12 bg-danger text-center">
+              {{ reg_error }}
+            </div>
+          </div>
+
           <div class="modal-footer">
             <div class="row">
               <div class="col-md-12">

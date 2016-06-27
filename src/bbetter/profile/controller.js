@@ -6,5 +6,10 @@ export default class ProfileCtrl {
     this.instructions = instructions;
     this.reports = reports;
     this.tariffs = tariffs;
+    this.day = 0;
+  }
+
+  selectDay( day ) {
+    this.day = day;
   }
 }

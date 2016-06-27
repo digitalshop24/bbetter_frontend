@@ -15,63 +15,65 @@
       <div class="row">
         <div class="col-md-12">
           <h2 class="titel_tariff">Еженедельный план тренировок</h2>
-          <button class="redBtn">Понедельник</button>
-          <button class="whiteBtn">Вторник</button>
-          <button class="whiteBtn">Среда</button>
-          <button class="whiteBtn">Четверг</button>
-          <button class="whiteBtn">Пятница</button>
-          <button class="whiteBtn">Суббота</button>
+          <button ng-click="ctrl.selectDay(0)" ng-attr-class="{{ ctrl.day == 0 ? 'redBtn' : 'whiteBtn' }}">Понедельник</button>
+          <button ng-click="ctrl.selectDay(1)" ng-attr-class="{{ ctrl.day == 1 ? 'redBtn' : 'whiteBtn' }}">Вторник</button>
+          <button ng-click="ctrl.selectDay(2)" ng-attr-class="{{ ctrl.day == 2 ? 'redBtn' : 'whiteBtn' }}">Среда</button>
+          <button ng-click="ctrl.selectDay(3)" ng-attr-class="{{ ctrl.day == 3 ? 'redBtn' : 'whiteBtn' }}">Четверг</button>
+          <button ng-click="ctrl.selectDay(4)" ng-attr-class="{{ ctrl.day == 4 ? 'redBtn' : 'whiteBtn' }}">Пятница</button>
+          <button ng-click="ctrl.selectDay(5)" ng-attr-class="{{ ctrl.day == 5 ? 'redBtn' : 'whiteBtn' }}">Суббота</button>
         </div>
-        <div class="col-md-3 text-left table_plan">
-          <h3>1 часть</h3>
-          <p>Тренировка из 3-ч частей</p>
-          <table class="">
-            <thead>
-              <tr>
-                <td>Упражнения</td>
-                <td>Раз</td>
-                <td>Минут</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Прыжковые
-                  <br>выпады</td>
-                <td>40</td>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-3 text-left table_plan">
-          <h3>2 часть</h3>
-          <p>6 упражнений, 3 круга, отдых между кругами</p>
-          <table class="">
-            <thead>
-              <tr>
-                <td>Упражнения</td>
-                <td>Раз</td>
-                <td>Минут</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Прыжковые
-                  <br>выпады</td>
-                <td>15</td>
-                <td>1,5</td>
-              </tr>
-              <tr>
-                <td>Ситап</td>
-                <td>10</td>
-                <td> </td>
-              </tr>
-              <tr>
-                <td>Берпи</td>
-                <td>5</td>
-                <td></td>
-              </tr>
-              <tr>
+
+        <div ng-show="ctrl.day == 0">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
+                <tr>
+                  <td>Упражнения</td>
+                  <td>Раз</td>
+                  <td>Минут</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Прыжковые
+                    <br>выпады</td>
+                  <td>40</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+                <tr>
+                  <td>Упражнения</td>
+                  <td>Раз</td>
+                  <td>Минут</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Прыжковые
+                    <br>выпады</td>
+                  <td>15</td>
+                  <td>1,5</td>
+                </tr>
+                <tr>
+                  <td>Ситап</td>
+                  <td>10</td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>Берпи</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
                 <td>Присед</td>
                 <td>15</td>
                 <td></td>
@@ -88,46 +90,606 @@
               </tr>
             </tbody>
           </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+                <tr>
+                  <td>Упражнения</td>
+                  <td>Раз</td>
+                  <td>Минут</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Планка</td>
+                  <td>40</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
+                <tr>
+                  <td>Упражнения</td>
+                  <td>Раз</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>jumping jack</td>
+                  <td style="border: none;">1000</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="col-md-3 text-left table_plan">
-          <h3>3 часть</h3>
-          <p>1 упражнение, табата 30/40, 3 раунда</p>
-          <table class="">
-            <thead>
+
+
+
+        <div ng-show="ctrl.day == 1">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
               <tr>
                 <td>Упражнения</td>
                 <td>Раз</td>
                 <td>Минут</td>
               </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>25</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Ситап</td>
+                <td>20</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Берпи</td>
+                <td>25</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Присед</td>
+                <td>25</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Отжимания</td>
+                <td>25</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лодочка</td>
+                <td>20</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td>Планка</td>
                 <td>40</td>
                 <td>1</td>
               </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-3 text-left table_plan">
-          <h3 class="h3Fix">Задание на день</h3>
-          <table class="">
-            <thead>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
               <tr>
                 <td>Упражнения</td>
                 <td>Раз</td>
                 <td></td>
               </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
               <tr>
                 <td>jumping jack</td>
                 <td style="border: none;">1000</td>
                 <td></td>
               </tr>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+
+
+        <div ng-show="ctrl.day == 2">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>35</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Ситап</td>
+                <td>30</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Берпи</td>
+                <td>35</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Присед</td>
+                <td>35</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Отжимания</td>
+                <td>35</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лодочка</td>
+                <td>30</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Планка</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td></td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>jumping jack</td>
+                <td style="border: none;">1000</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+        <div ng-show="ctrl.day == 3">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>45</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Ситап</td>
+                <td>40</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Берпи</td>
+                <td>45</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Присед</td>
+                <td>45</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Отжимания</td>
+                <td>45</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лодочка</td>
+                <td>40</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Планка</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td></td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>jumping jack</td>
+                <td style="border: none;">1000</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+
+        <div ng-show="ctrl.day == 4">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>55</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Ситап</td>
+                <td>50</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Берпи</td>
+                <td>55</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Присед</td>
+                <td>55</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Отжимания</td>
+                <td>55</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лодочка</td>
+                <td>50</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Планка</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td></td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>jumping jack</td>
+                <td style="border: none;">1000</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+
+        <div ng-show="ctrl.day == 5">
+          <div class="col-md-3 text-left table_plan">
+            <h3>1 часть</h3>
+            <p>Тренировка из 3-ч частей</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>2 часть</h3>
+            <p>6 упражнений, 3 круга, отдых между кругами</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Прыжковые
+                  <br>выпады</td>
+                <td>65</td>
+                <td>1,5</td>
+              </tr>
+              <tr>
+                <td>Ситап</td>
+                <td>60</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Берпи</td>
+                <td>65</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Присед</td>
+                <td>65</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Отжимания</td>
+                <td>65</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лодочка</td>
+                <td>60</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3>3 часть</h3>
+            <p>1 упражнение, табата 30/40, 3 раунда</p>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td>Минут</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Планка</td>
+                <td>40</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3 text-left table_plan">
+            <h3 class="h3Fix">Задание на день</h3>
+            <table class="">
+              <thead>
+              <tr>
+                <td>Упражнения</td>
+                <td>Раз</td>
+                <td></td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>jumping jack</td>
+                <td style="border: none;">1000</td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>

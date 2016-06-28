@@ -1,9 +1,0 @@
-{
-  "domain": "http://bbetter.herokuapp.com/api",
-  "appTokenName": "bbetter-app-token",
-  "payment" : {
-    "url": "https://demomoney.yandex.ru/eshop.xml",
-    "shopId": 62054,
-    "scid": 537692
-  }
-}
